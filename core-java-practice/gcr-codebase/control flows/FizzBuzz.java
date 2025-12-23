@@ -1,0 +1,38 @@
+//Write a program FizzBuzz, take a number as user input, and check for a positive integer. If positive integer, loop and print the number, but for multiples of 3 print "Fizz" instead of the number, for multiples of 5 print "Buzz", and for multiples of both print "FizzBuzz".
+
+//importing Scanner class for input
+import java.util.Scanner;
+
+public class FizzBuzz {
+    public static void main(String[] args) 
+	{
+	    //scanner object
+        Scanner input = new Scanner(System.in);
+		//user input
+		int number=input.nextInt();
+		if(number>=0)
+		{
+		    System.out.println("you entered a positive number");
+			for(int i=1; i<=number; i++)
+			{
+			    if(i%3==0 && i%5==0)
+				{
+				    System.out.println("FizzBuzz "+i);
+				}
+				else if(i%3==0)
+				{
+				    System.out.println("Fizz "+i);
+				}
+				else if(i%5==0)
+				{
+				    System.out.println("Buzz "+i);
+				}
+			}
+		}
+		else
+		{
+		    System.out.println("you enetred a non positive number");
+		}	
+        input.close();
+    }
+}
