@@ -1,5 +1,5 @@
-//Write a program that takes two numbers as input from the user and prints
-their sum.
+//Write a program that takes two numbers as input from the user and prints their sum.
+import java.util.Scanner;
 public class AddTwoNumbers
 {
     public static void main(String[] args)
@@ -8,7 +8,8 @@ public class AddTwoNumbers
 		int num1=input.nextInt();
 		int num2=input.nextInt();
 		int add=num1+num2;
-		System.out.println(add);
+		System.out.println("Sum:"+add);
+		input.close();
 	}
 }
 	

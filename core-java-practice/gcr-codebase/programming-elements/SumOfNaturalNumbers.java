@@ -18,7 +18,7 @@ public class SumOfNaturalNumbers {
 	       while(i<=number)
 		   {
 		       sumWithoutFormula+=i;
-			   i++
+			   i++;
 			}
 		}
 		if(sumUsingFormula==sumWithoutFormula)

@@ -1,5 +1,4 @@
 //Write a program SpringSeason that takes two int values month and day from the command line and prints “Its a Spring Season” otherwise prints “Not a Spring Season”.
-import  java.util.Scanner;
 public class SpringSeason {
     public static void main(String[] args) {
 
