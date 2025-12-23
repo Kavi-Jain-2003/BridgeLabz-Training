@@ -4,10 +4,12 @@ public class HarryAge
 {
     public static void main(String[] args)
 	{
+		//initialising variables
 	    int birthYear=2000;
 		int currentYear=2024;
+		//calculating harryAge
 		int harryAge=currentYear-birthYear;
+		//displaying output
 		System.out.println("Harry's Age in "+currentYear+" is "+ harryAge);
 	}
-
 }

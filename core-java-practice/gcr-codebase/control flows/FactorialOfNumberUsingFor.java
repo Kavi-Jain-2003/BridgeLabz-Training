@@ -9,8 +9,10 @@ public class FactorialOfNumberUsingFor {
 	    //scanner object
         Scanner input = new Scanner(System.in);
 		//user input
+		System.out.println("Enter number:");
        int number=input.nextInt();
 	   int factorial=1;
+	   //calculating factorial
 	   if(number>=0)
 	   {
 	       System.out.println("user entered a positive number");
@@ -25,6 +27,7 @@ public class FactorialOfNumberUsingFor {
 		{
 		    System.out.println("please enter a positive number");
 		}        
+		//closing input
         input.close();
     }
 }

@@ -4,11 +4,13 @@ public class PenDistribution
 {
     public static void main(String[] args)
 	{
+		//initialising variables
 	    int pens=14;
 		int students=3;
+		//calculating to divide equally and to find remaining ones
 		int equalPensToBeDivided=pens/students;
 		int remainingPens=pens%students;
-		System.out.println("The Pen Per Student is "+equalPensToBeDivided+" and the remaining pen not distributed is "+remainingPens);
-		
+		//displaying output
+		System.out.println("The Pen Per Student is "+equalPensToBeDivided+" and the remaining pen not distributed is "+remainingPens);		
 	}
 }

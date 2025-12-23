@@ -11,7 +11,7 @@ public class MultiplicationTable {
 		//user input
 		System.out.println("please enter a number from 6 to 9");
        int number=input.nextInt();
-	   
+	   //calculting multiplication table
 	   if(number>=6 && number<=9)
 	   {
 	      for(int i=1; i<=10; i++)
@@ -23,7 +23,7 @@ public class MultiplicationTable {
 		{
 		    System.out.println("incorrect number");
 		}
-		
+		//closing input
         input.close();
     }
 }

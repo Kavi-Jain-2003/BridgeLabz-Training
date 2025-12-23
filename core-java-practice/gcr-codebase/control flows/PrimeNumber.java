@@ -9,6 +9,7 @@ public class PrimeNumber {
 	    //scanner object
         Scanner input = new Scanner(System.in);
 		//user input
+		System.out.println("Enter number;");
 		int number = input.nextInt();
 		boolean isPrime=true;
 		//if to check the number is greater than 1 and is not divisible by any other except itself and one

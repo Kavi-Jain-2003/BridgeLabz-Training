@@ -9,11 +9,13 @@ public class CalculatorUsingSwitchCase {
       Scanner input = new Scanner(System.in);
 
       // Get input value 
+	  System.out.println("Enter first number:");
 	  Double first=input.nextDouble();
+	  System.out.println("Enter second number:");
 	  Double second=input.nextDouble();
 	  System.out.println("choose op from this + - * /");
 	  char op = input.next().charAt(0);
-
+	  //switchcase and prnting calculation result
         switch (op) {
             case '+':
                 System.out.println("Result = " + (first + second));

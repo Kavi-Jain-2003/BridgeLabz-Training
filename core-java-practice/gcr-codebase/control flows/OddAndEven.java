@@ -9,8 +9,9 @@ public class OddAndEven {
 	    //scanner object
         Scanner input = new Scanner(System.in);
 		//user input
+		System.out.println("Enter number:");
        int number=input.nextInt();
-	   
+	   //checking for odd and even
 	   if(number>=0)
 	   {
 	       System.out.println("user entered a positive number");
@@ -29,7 +30,8 @@ public class OddAndEven {
 		else
 		{
 		    System.out.println("please enter a positive number");
-		}        
+		}  
+		//closing input		
         input.close();
     }
 }

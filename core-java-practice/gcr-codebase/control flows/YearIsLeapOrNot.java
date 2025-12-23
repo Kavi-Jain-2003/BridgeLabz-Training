@@ -9,7 +9,9 @@ public class YearIsLeapOrNot {
 	    //scanner object
         Scanner input = new Scanner(System.in);
 		//user input
+		System.out.println("Enter year:");
 		int year=input.nextInt();
+		//checking for year greater than 1582 and should be a leap year
 		if(year>=1582)
 		{
 			if(year%400==0)

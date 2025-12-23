@@ -10,7 +10,9 @@ public class AreaOfTriangle
 	    Scanner input=new Scanner(System.in);
 		
 		//taking inputs from user
+		System.out.println("Enter base:");
 	    int base=input.nextInt();
+		System.out.println("Enter height:");
 		int height=input.nextInt();
 		
 		//calculating area of triangle

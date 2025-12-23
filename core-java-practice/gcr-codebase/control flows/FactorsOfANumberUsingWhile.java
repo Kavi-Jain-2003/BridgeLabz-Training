@@ -29,7 +29,7 @@ public class FactorsOfANumberUsingWhile {
 		{
 			System.out.println("you entered a non-positive number");
 		}
-		
+		//closing input
         input.close();
     }
 }

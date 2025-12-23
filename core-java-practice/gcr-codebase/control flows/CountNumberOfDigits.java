@@ -1,4 +1,5 @@
 //Create a program to count the number of digits in an integer.
+//importing Scanner class
 import java.util.Scanner;
 
 public class CountNumberOfDigits {

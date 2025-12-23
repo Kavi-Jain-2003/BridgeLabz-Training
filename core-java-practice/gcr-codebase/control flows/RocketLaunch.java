@@ -8,7 +8,7 @@ public class RocketLaunch
 	{
 		//creating scanner object
 	    Scanner input=new Scanner(System.in);
-		
+		System.out.println("Enter counter:");
 	    int counter=input.nextInt();
 		//while loop to decrement counter upto 1
 		while(counter>=1)

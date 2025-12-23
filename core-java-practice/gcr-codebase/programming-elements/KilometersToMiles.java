@@ -5,7 +5,7 @@ public class KilometersToMiles
 {
     public static void main(String[] args)
 	{
-		//creating scnner object
+		//creating scanner object
 	    Scanner input=new Scanner(System.in);
 		//taking inputs from user
 		double kilometers=input.nextDouble();

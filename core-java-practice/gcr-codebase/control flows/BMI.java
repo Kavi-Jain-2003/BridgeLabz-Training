@@ -1,17 +1,21 @@
 //Create a program to find the BMI of a person
+//importing Scanner class
 import java.util.Scanner;
-
 public class BMI {
 
    public static void main(String[] args) {
       // Create a Scanner Object
       Scanner input = new Scanner(System.in);
 
-      // Get input value for number
+      // Get input value 
+	  System.out.println("Enter weight:");
       double weight = input.nextDouble();
+	  System.out.println("Enter height:");
 	  double height = input.nextDouble();
+	  //calculating bmi
 	  double bmi=weight/(height*height);
 	  String status="";
+	  // initialising status according to bmi
 	  if(bmi<=18.4)
 	  {
 	      status="Underweight";

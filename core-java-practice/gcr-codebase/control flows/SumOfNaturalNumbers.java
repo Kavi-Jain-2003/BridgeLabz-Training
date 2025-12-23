@@ -5,12 +5,14 @@ import java.util.Scanner;
 
 public class SumOfNaturalNumbers {
     public static void main(String[] args) {
-
+		//creating scanner object
         Scanner input = new Scanner(System.in);
-
+		//taking input from user
+		System.out.println("Enter number:");
        int number=input.nextInt();
 	   int sumWithoutFormula=0;
 	   int sumUsingFormula=0;
+	   //sumUsingFormula and sumWithoutFormula
 	   if(number>0)
 	   {
 		   System.out.println("you entered a natural number");
@@ -32,6 +34,7 @@ public class SumOfNaturalNumbers {
 		{
 			System.out.println("you entered a non natural number");
 		}
+		//closing input
 		input.close();
     }
 }

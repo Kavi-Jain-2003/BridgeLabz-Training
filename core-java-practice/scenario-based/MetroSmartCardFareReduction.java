@@ -1,4 +1,3 @@
-
 // Metro Smart Card Fare Deduction. In Delhi Metro, fare varies by distance.
 import java.util.Scanner;
 
@@ -9,7 +8,7 @@ public class MetroSmartCardFareReduction {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter initial smart card balance: ");
 		double smartCardBalance = input.nextDouble();		
-
+		//checking for balance then reducing fare from it
 		while (smartCardBalance > 0) {
 			System.out.print("\nEnter distance travelled (or -1 to exit): ");
 			int distance = input.nextInt();

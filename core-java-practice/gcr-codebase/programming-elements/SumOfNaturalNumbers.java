@@ -5,12 +5,15 @@ import java.util.Scanner;
 
 public class SumOfNaturalNumbers {
     public static void main(String[] args) {
-
+		//creating scanner object
         Scanner input = new Scanner(System.in);
-
+		//taking input from user
+		System.out.println("Enter number:");
        int number=input.nextInt();
+	   //initialising variables
 	   int sumWithoutFormula=0;
 	   int sumUsingFormula=0;
+	   //if statement to check natural number and loop to calculate sum of natural number 
 	   if(number>0)
 	   {
 	       sumUsingFormula=number*(number+1)/2;
@@ -21,6 +24,7 @@ public class SumOfNaturalNumbers {
 			   i++;
 			}
 		}
+		//compare
 		if(sumUsingFormula==sumWithoutFormula)
 		{
 		    System.out.println("Both the result is same");
@@ -28,6 +32,7 @@ public class SumOfNaturalNumbers {
 			
         // display sum outside the loop
         System.out.println("Sum without formula = " + sumWithoutFormula+" Sum with formula= "+sumUsingFormula);
+		//closing input
         input.close();
     }
 }

@@ -9,9 +9,11 @@ public class ReportCard {
 	    //scanner object
         Scanner input = new Scanner(System.in);
 		//user input
-		 
+		 System.out.println("Enter physicsMarks:");
         int physicsMarks = input.nextInt();
+		System.out.println("Enter chemistryMarksMarks:");
         int chemistryMarks = input.nextInt();
+		System.out.println("Enter mathsMarksMarks:");
         int mathsMarks = input.nextInt();
 		
 
@@ -22,7 +24,7 @@ public class ReportCard {
 
         String grade = "";
         String remarks = "";
-
+		//setting grade and rearks according to percentage
         if (percentage >= 80) {
             grade = "A";
             remarks = "Level 4, above agency-normalized standards";
@@ -47,10 +49,11 @@ public class ReportCard {
             grade = "R";
             remarks = "Remedial standards";
         }
-
+		//displaying output
         System.out.println("Average Marks = " + averageMarks);
         System.out.println("Grade = " + grade);
         System.out.println("Remarks = " + remarks);//closing the input
+		//closing input
         input.close();
 		
     }

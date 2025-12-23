@@ -16,6 +16,7 @@ public class SumOfNumbersUntilZeroOrNegative {
 
         while (true) {
 		    // take user input
+			System.out.println("Enter value:");
             value = input.nextDouble(); 
 
             // break if user enters 0 or negative number
@@ -28,6 +29,7 @@ public class SumOfNumbersUntilZeroOrNegative {
 
         // display total outside the loop
         System.out.println("Total = " + total);
+		//closing input
         input.close();
     }
 }

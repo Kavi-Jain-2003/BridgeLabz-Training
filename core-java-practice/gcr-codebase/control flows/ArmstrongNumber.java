@@ -21,6 +21,7 @@ public class ArmstrongNumber {
 			//the quotient of the number using the division operation 
 			oriNumber=oriNumber/10;			
 		}
+		//check for armstrongnumber and display output
 		if(number==oriNumber)
 		{
 		    System.out.println(number+" is an armstrong number");

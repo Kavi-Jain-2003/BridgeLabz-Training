@@ -17,6 +17,7 @@ public class CoffeeCounterChronicles {
             }
 
 			double price = 0;
+			//switch case for coffeeType
 
 			switch (coffeeType) {
 				case "Espresso":
@@ -46,8 +47,8 @@ public class CoffeeCounterChronicles {
 			System.out.println("BillAmount:" + total);
 			System.out.println("GST:" + gst);
 			System.out.println("FinalBill:" + finalBill);
-			// closing input
 		}
+		// closing input
 		input.close();		
 	}
 }

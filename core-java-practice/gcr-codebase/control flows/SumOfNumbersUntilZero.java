@@ -16,6 +16,7 @@ public class SumOfNumbersUntilZero {
         double value;
 
         // take first input
+		System.out.println("Enter value:");
         value = input.nextDouble();
 
         // while loop continues until user enters 0
@@ -26,7 +27,7 @@ public class SumOfNumbersUntilZero {
 
         // display total outside the loop
         System.out.println("Total = " + total);
-
+		//closing input
         input.close();
     }
 }

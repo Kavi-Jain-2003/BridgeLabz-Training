@@ -9,7 +9,9 @@ public class FizzBuzzUsingWhile {
 	    //scanner object
         Scanner input = new Scanner(System.in);
 		//user input
+		System.out.println("Enter number:");
 		int number=input.nextInt();
+		//fizzbuzz for multiple of 3 and 5, fizz for multiple of 3 and buzz for multiple of 5
 		if(number>=0)
 		{
 		    System.out.println("you entered a positive number");
@@ -35,6 +37,7 @@ public class FizzBuzzUsingWhile {
 		{
 		    System.out.println("you enetred a non positive number");
 		}	
+		//closing input
         input.close();
     }
 }

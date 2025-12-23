@@ -9,7 +9,9 @@ public class PowerOfANumberUsingWhile {
 	    //scanner object
         Scanner input = new Scanner(System.in);
 		//user input
+		System.out.println("Enter number:");
 		int number=input.nextInt();
+		System.out.println("Enter power:");
 		int power=input.nextInt();
 		int result=1;
 		//check input for positive integer and loop to calculate the power of that number
@@ -27,6 +29,7 @@ public class PowerOfANumberUsingWhile {
 		{
 		    System.out.println("invalid no.");
 		}
+		//displaying output
 		System.out.println(number+" to the "+power+" is "+result); 
 		
 		//closing the input

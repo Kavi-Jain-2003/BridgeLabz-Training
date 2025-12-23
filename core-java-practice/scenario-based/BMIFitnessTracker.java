@@ -8,11 +8,14 @@ public class BMIFitnessTracker {
       Scanner input = new Scanner(System.in);
 
       // Get input value for number
+	  System.out.println("Enter height:");
 	  double height = input.nextDouble();
+	  System.out.println("Enter weight:");
       double weight = input.nextDouble();
 	  //calculate bmi
 	  double bmi=weight/(height*height);
 	  String status="";
+	  //setting status according to bmi
 	  if(bmi<=18.4)
 	  {
 	      status="Underweight";
