@@ -11,17 +11,17 @@ public class ArmstrongNumber {
 		//user input
 		int number = input.nextInt();
 		int sum=0;
-		int originalNumber=number;
+		int oriNumber=number;
 		//loop till the originalNumber is not equal to zero
-		while(originalNumber!=0)
+		while(oriNumber!=0)
 		{
 		    int digit=number%10;
 			//the cube of the number and add it to the sum variable
 			sum=sum+digit*digit*digit;
 			//the quotient of the number using the division operation 
-			originalNumber=originalNumber/10;			
+			oriNumber=oriNumber/10;			
 		}
-		if(number==originalNumber)
+		if(number==oriNumber)
 		{
 		    System.out.println(number+" is an armstrong number");
 		}
