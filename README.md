@@ -11,4 +11,4 @@ Week 2: Programming elements, control flows, arrays, strings and methods
 • 24-Jan-2025 (Wednesday): Studied the Java Arrays concept. Practiced Level 1,2 array problems.
 • 25-Jan-2025 (Thursday): Continued with documentation and completed Level 3 problems on Arrays.
 • 26-Jan-2025 (Friday): Completed and submitted Level 1 and Level 2 problems of String.
-• 27-Jan-2025 (Tuesday): Continued with documentation and completed Level 3 problems on Strings.
+• 27-Jan-2025 (Tuesday): Continued with documentation and completed Level 3 problems on Strings._Last updated from VS Code_
