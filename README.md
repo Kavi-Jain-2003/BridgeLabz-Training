@@ -22,4 +22,7 @@ Week 2: Programming elements, control flows, arrays, strings and methods
 
 • 28-Jan-2025 (Sunday): Continued with documentation and completed Level 3 problems on Methods.
 
+Week 3: Built-In Functions and Scenerio-based 
+• 29-Jan-2025 (Monday): Completed the extras of scnerio-based and built-in functions
+
 
