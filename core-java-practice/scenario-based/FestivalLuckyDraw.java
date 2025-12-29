@@ -1,44 +1,34 @@
-//* Festival Lucky Draw At Diwali mela, each visitor draws a number. ● If the number is divisible by 3 and 5, they win a gift. ● Use if, modulus, and loop for multiple visitors. ● continue if input is invalid.
+//Festival Lucky Draw At Diwali mela, each visitor draws a number.  If the number is divisible by 3 and 5, they win a gift.  Use if, modulus, and loop for multiple visitors.  continue if input is invalid.
 
 //importing scanner class
 import java.util.Scanner;
 
 public class FestivalLuckyDraw {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int numVisitors;
+	public static void main(String[] args) {
+		// scanner object
+		Scanner input = new Scanner(System.in);
+		// user input
+		System.out.print("Enter the number of visitors: ");
+		int numVisitors = input.nextInt();
 
-        System.out.print("Enter the number of visitors: ");
-        numVisitors = sc.nextInt();
+		for (int i = 1; i <= numVisitors; i++) {
+			System.out.println("\nVisitor " + i + ":");
+			System.out.print("Enter your lucky number: ");
+			int luckyNumber = input.nextInt();
+			if (luckyNumber <= 0) {
+				System.out.print("you entered an invalid number ");
+				i--;
+				continue;
+			}
+			if (luckyNumber % 3 == 0 && luckyNumber % 5 == 0) {
+				System.out.print("You win the prize!!! ");
+			} else {
+				System.out.print("Better luck next time!!! ");
+			}
 
-        for (int i = 1; i <= numVisitors; i++) {
-            System.out.println("\nVisitor " + i + ":");
-            System.out.print("Enter your lucky number: ");
+		}
+		// closing input
+		input.close();
 
-            if (!sc.hasNextInt()) { // Check if input is valid integer
-                System.out.println("Invalid input! Please enter a number.");
-                sc.next(); // Consume invalid input
-                i--; // Repeat for this visitor
-                continue;
-            }
-
-            int number = sc.nextInt();
-
-            if (number <= 0) {
-                System.out.println("Invalid number! Must be positive.");
-                i--; // Repeat for this visitor
-                continue;
-            }
-
-            // Check if number divisible by 3 and 5
-            if (number % 3 == 0 && number % 5 == 0) {
-                System.out.println("Congratulations! You won a gift 🎁");
-            } else {
-                System.out.println("Sorry! Better luck next time.");
-            }
-        }
-
-        System.out.println("\nThank you for participating in the Festival Lucky Draw 🎉");
-        sc.close();
-    }
+	}
 }

@@ -24,15 +24,15 @@ public class RemoveAllOccurrences {
 
 	//remove character from string
 	public static String removeCharacter(String text,char remove) {
-		String removeChar="";
+		String afterRemoveChar="";
 		for(int i=0; i<text.length(); i++)
 		{
 			char ch=text.charAt(i);
 			if(ch!=remove)
 			{
-				removeChar+=ch;
+				afterRemoveChar+=ch;
 			}
 		}
-		return removeChar;
+		return afterRemoveChar;
 	}
 }

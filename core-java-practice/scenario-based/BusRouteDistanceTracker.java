@@ -5,12 +5,11 @@ import java.util.Scanner;
 
 public class BusRouteDistanceTracker {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int totalDistance = 0; // Total distance travelled
+		//scanner object
+        Scanner input = new Scanner(System.in);
+        int totalDistance = 0;
         int stopDistance = 5;  // Assume each stop adds 5 km
-        int stopNumber = 1;    // Current stop number
-
-        System.out.println("Welcome to the Bus Route Distance Tracker");
+        int stopNumber = 1;   
 
         while (true) {
             // Add distance for this stop
@@ -19,29 +18,29 @@ public class BusRouteDistanceTracker {
             System.out.println("Distance travelled so far: " + totalDistance + " km");
 
             // Ask if passenger wants to get off
-            System.out.print("Do you want to get off here? (yes/no): ");
-            String response = sc.next().toLowerCase();
+            System.out.print("Do you want to get off here (yes/no): ");
+            String response = input.next().toLowerCase();
 
             if (response.equals("yes")) {
                 System.out.println("You got off at stop " + stopNumber + ".");
                 System.out.println("Total distance travelled: " + totalDistance + " km");
-                break; // Exit the loop
+                break; 
             }
 
             // Ask if the passenger wants to continue
-            System.out.print("Do you want to continue to the next stop? (yes/no): ");
-            response = sc.next().toLowerCase();
+            System.out.print("Do you want to continue to the next stop (yes/no): ");
+            response = input.next().toLowerCase();
 
             if (!response.equals("yes")) {
                 System.out.println("Bus route ended by passenger.");
                 System.out.println("Total distance travelled: " + totalDistance + " km");
-                break; // Exit the loop
+                break; 
             }
 
             stopNumber++; // Move to next stop
         }
 
-        System.out.println("\nThank you for using the Bus Route Distance Tracker 🚌");
-        sc.close();
+        //closing input
+        input.close();
     }
 }
