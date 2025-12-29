@@ -1,5 +1,4 @@
-
-//* Movie Ticket Booking App
+//Movie Ticket Booking App
 //importing scanner class
 import java.util.Scanner;
 
