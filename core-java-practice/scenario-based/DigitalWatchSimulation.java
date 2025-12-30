@@ -10,7 +10,7 @@ public class DigitalWatchSimulation {
 			{
 				if(hour==13 && min==0)
 				{
-					System.out.println("power cut");
+					System.out.println("power is cut");
 					break;
 				}
 				System.out.printf("%02d:%02d\n",hour,min);
