@@ -1,4 +1,4 @@
-//rogram to Simulate Student Report Problem Statement: Create a Student class with attributes name, rollNumber, and marks. Add two methods: ● To calculate the grade based on the marks. ● To display the student&#39;s details and grade.
+//rogram to Simulate Student Report Problem Statement: Create a Student class with attributes name, rollNumber, and marks. Add two methods: ● To calculate the grade based on the marks. ● To display the students details and grade.
 // Student class
 class Student {
     // Attributes

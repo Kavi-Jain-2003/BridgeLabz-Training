@@ -13,8 +13,17 @@ class PalindromeChecker {
     public boolean isPalindrome() {
         // Remove spaces and convert to lowercase for uniformity
         String cleanedText = text.replaceAll("\\s+", "").toLowerCase();
-        String reversedText = new StringBuilder(cleanedText).reverse().toString();
-        return cleanedText.equals(reversedText);
+        int left = 0;
+        int right = cleanedText.length() - 1;
+
+        while (left < right) {
+            if (cleanedText.charAt(left) != cleanedText.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
     }
 
     // Method to display result
