@@ -75,6 +75,6 @@ public class SavingAccount extends BankAccountWithDetails {
         sa.deposit(10000);
         sa.withdraw(5000);
 
-        System.out.println("Updated Balance: " + sa.getBalance());
+        System.out.println("Updated Balance after deposit and withdraw: " + sa.getBalance());
     }
 }

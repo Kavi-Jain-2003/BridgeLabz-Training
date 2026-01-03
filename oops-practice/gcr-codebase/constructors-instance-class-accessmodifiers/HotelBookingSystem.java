@@ -5,6 +5,7 @@ public class HotelBookingSystem {
 	String guestName;
 	String roomType;
 	int nights;
+	//default constructor
 	HotelBookingSystem()
 	{
 		guestName="Ajay";
@@ -18,6 +19,7 @@ public class HotelBookingSystem {
 		this.roomType=roomType;
 		this.nights=nights;
 	}
+	//copy constructor
 	HotelBookingSystem(HotelBookingSystem h)
 	{
 		this.guestName=h.guestName;

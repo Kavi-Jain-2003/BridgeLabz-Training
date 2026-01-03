@@ -55,7 +55,7 @@ public class PostgraduateStudent extends StudentWithDetails {
     public static void main(String[] args) {
 
         PostgraduateStudent pg =
-                new PostgraduateStudent(101, "Kavi", 8.5, "Computer Science");
+                new PostgraduateStudent(101, "Ravi", 8.5, "Computer Science");
 
         pg.displayPGDetails();
 
