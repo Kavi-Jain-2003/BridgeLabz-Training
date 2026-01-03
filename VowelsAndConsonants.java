@@ -1,7 +1,7 @@
 //count vowels and consonants
 //importing scanner class
 import java.util.Scanner;
-public class VowelsAndConsonant {
+public class VowelsAndConsonants {
     public static void main(String[] args) {
         //creating scanner object
         Scanner sc=new Scanner(System.in);
