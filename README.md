@@ -23,6 +23,13 @@ Week 2: Programming elements, control flows, arrays, strings and methods
 • 28-Jan-2025 (Sunday): Continued with documentation and completed Level 3 problems on Methods.
 
 Week 3: Built-In Functions and Scenerio-based 
-• 29-Jan-2025 (Monday): Completed the extras of scnerio-based and built-in functions
+
+• 29-Jan-2025 (Monday): Completed the extras of scnerio-based and built-in functions and employee wage computation problem.
+
+• 30-Jan-2025 (Tuesday): Completed the scenerio based question of line comparison and snake and ladder problem.
+
+• 31-Jan-2025 (Wednesday): Studied and completed the Java constructors,instance v/s class variables and access modifiers.
+
+
 
 
