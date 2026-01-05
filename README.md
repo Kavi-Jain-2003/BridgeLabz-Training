@@ -55,14 +55,10 @@ Leave
 Submitted assignments related to Java Inheritance And Review.
 
 *04-Jan-2026 (Sunday):
-Submitted Scenerio based problems
+Continued working on scenario-based Java problems to strengthen problem-solving skills.
 
 *05-Jan-2026 (Monday):
 Submitted Object Oriented Design Principles questions including object, class and sequence diagrams.
-
-
-*04-Jan-2026 (Sunday):
-Continued working on scenario-based Java problems to strengthen problem-solving skills.
 
 -------------------------------------------------------------------------------------------------------------
 
