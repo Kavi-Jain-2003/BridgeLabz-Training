@@ -1,4 +1,5 @@
 **Weekly Learning Progress Report**
+
 **Week 1: Getting Started with Development Tools and Java Basics**
 
 20-Dec-2025 (Saturday):
@@ -50,6 +51,7 @@ Submitted assignments related to Java Inheritance.
 
 04-Jan-2026 (Sunday):
 Continued working on scenario-based Java problems to strengthen problem-solving skills.
+
 05-Jan-2026 (Sunday):
 Submitted Assignment on Encapsulation and polymorphism.
 
