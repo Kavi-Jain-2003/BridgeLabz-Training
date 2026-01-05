@@ -50,3 +50,6 @@ Submitted assignments related to Java Inheritance.
 
 04-Jan-2026 (Sunday):
 Continued working on scenario-based Java problems to strengthen problem-solving skills.
+05-Jan-2026 (Sunday):
+Submitted Assignment on Encapsulation and polymorphism.
+
