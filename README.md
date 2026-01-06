@@ -49,9 +49,14 @@ Submitted assignments on Java Constructors, Instance Variables, and Class Object
 03-Jan-2026 (Saturday):
 Submitted assignments related to Java Inheritance.
 
+03-Jan-2026 (Saturday):
+Submitted assignments related to Java Inheritance.
+
 04-Jan-2026 (Sunday):
 Continued working on scenario-based Java problems to strengthen problem-solving skills.
 
-05-Jan-2026 (Sunday):
+05-Jan-2026 (Monday):
 Submitted Assignment on Encapsulation and polymorphism.
 
+06-Jan-2026(Tuesday):
+Submitted oops scenerio based and leetcode problem
