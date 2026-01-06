@@ -1,112 +1,152 @@
-// Interface for GPS functionality
+//Ride-Hailing Application
+//interface with abstract methods
 interface GPS {
-    String getCurrentLocation();
-    void updateLocation(String newLocation);
+    public abstract void getCurrentLocation();
+
+    public abstract void updateLocation(String newLocation);
 }
 
-// Abstract class Vehicle
-abstract class Vehicle implements GPS {
+// abstract class
+abstract class Vehicle implements GPS{
     private int vehicleId;
     private String driverName;
-    protected double ratePerKm;
-    private String currentLocation;
+    protected int ratePerKm;
 
-    Vehicle(int vehicleId, String driverName, double ratePerKm, String currentLocation) {
+    Vehicle(int vehicleId, String driverName, int ratePerKm) {
         this.vehicleId = vehicleId;
         this.driverName = driverName;
         this.ratePerKm = ratePerKm;
-        this.currentLocation = currentLocation;
     }
 
-    // Encapsulation: Getters and setters
-    public int getVehicleId() { return vehicleId; }
-    public String getDriverName() { return driverName; }
-    public double getRatePerKm() { return ratePerKm; }
-
-    @Override
-    public String getCurrentLocation() { return currentLocation; }
-
-    @Override
-    public void updateLocation(String newLocation) { currentLocation = newLocation; }
-
-    // Concrete method to display vehicle details
-    public void getVehicleDetails() {
-        System.out.println("Vehicle ID: " + getVehicleId());
-        System.out.println("Driver Name: " + getDriverName());
-        System.out.println("Rate per Km: " + getRatePerKm());
-        System.out.println("Current Location: " + getCurrentLocation());
+    // getter
+    public int getvehicleId() {
+        return vehicleId;
     }
 
-    // Abstract method to calculate fare
-    public abstract double calculateFare(double distance);
+    public String getVehicledriverName() {
+        return driverName;
+    }
+
+    public double getratePerKm() {
+        return ratePerKm;
+    }
+
+    // setter
+    public void setratePerKm(int ratePerKm) {
+        this.ratePerKm = ratePerKm;
+    }
+    // abstract method
+
+    abstract double calculateFare(double distance);
+    public void getvehicleDetails()
+    {
+        System.out.println("vehicleId:"+getvehicleId());
+        System.out.println("vehicledriver name:"+getVehicledriverName());
+        System.out.println("rate per km:"+getratePerKm());
+
+    }
+
+   
 }
 
-// Car class
+// class extending abstract class
 class Car extends Vehicle {
-    private double carExtraCharge = 50; // extra charge per ride
+    private String location;
 
-    Car(int vehicleId, String driverName, double ratePerKm, String location) {
-        super(vehicleId, driverName, ratePerKm, location);
+    Car(int vehicleId, String driverName, int ratePerKm,String location) {
+        super(vehicleId, driverName, ratePerKm);
+        this.location=location;
     }
 
+    // overriding abstarct class abstract method
     @Override
-    public double calculateFare(double distance) {
-        return (ratePerKm * distance) + carExtraCharge;
+    double calculateFare(double distance) {
+       return getratePerKm()*distance;
+    }
+
+    // overidding interface mathod
+    @Override
+    public void getCurrentLocation() {
+        System.out.println("CurrentLocation:"+location);
+    }
+
+    // overidding interface mathod
+    @Override
+    public void updateLocation(String newLocation) {
+        location=newLocation;
+        System.out.println("New Location:"+location);       
     }
 }
-
-// Bike class
 class Bike extends Vehicle {
-    Bike(int vehicleId, String driverName, double ratePerKm, String location) {
-        super(vehicleId, driverName, ratePerKm, location);
+    private String location;
+
+    Bike(int vehicleId, String driverName, int ratePerKm,String location) {
+        super(vehicleId, driverName, ratePerKm);
+        this.location=location;
     }
 
+    // overriding abstarct class abstract method
     @Override
-    public double calculateFare(double distance) {
-        return ratePerKm * distance; // no extra charge for bike
+    double calculateFare(double distance) {
+       return getratePerKm()*distance;
+    }
+
+    // overidding interface mathod
+    @Override
+    public void getCurrentLocation() {
+        System.out.println("CurrentLocation:"+location);
+    }
+
+    // overidding interface mathod
+    @Override
+    public void updateLocation(String newLocation) {
+        location=newLocation;
+        System.out.println("New Location:"+location);       
     }
 }
 
-// Auto class
 class Auto extends Vehicle {
-    private double autoExtraCharge = 20; // flat charge per ride
+    private String location;
 
-    Auto(int vehicleId, String driverName, double ratePerKm, String location) {
-        super(vehicleId, driverName, ratePerKm, location);
+    Auto(int vehicleId, String driverName, int ratePerKm,String location) {
+        super(vehicleId, driverName, ratePerKm);
+        this.location=location;
     }
 
+    // overriding abstarct class abstract method
     @Override
-    public double calculateFare(double distance) {
-        return (ratePerKm * distance) + autoExtraCharge;
+    double calculateFare(double distance) {
+       return getratePerKm()*distance;
+    }
+
+    // overidding interface mathod
+    @Override
+    public void getCurrentLocation() {
+        System.out.println("CurrentLocation:"+location);
+    }
+
+    // overidding interface mathod
+    @Override
+    public void updateLocation(String newLocation) {
+        location=newLocation;
+        System.out.println("New Location:"+location);       
     }
 }
-
-// Main class
 public class RideHailingSystem {
-    // Method to process fare dynamically using polymorphism
-    public static void processFare(Vehicle vehicle, double distance) {
-        vehicle.getVehicleDetails();
-        double fare = vehicle.calculateFare(distance);
-        System.out.println("Distance: " + distance + " km");
-        System.out.println("Calculated Fare: " + fare);
-        System.out.println("-------------------------------");
-    }
-
     public static void main(String[] args) {
-        // Creating different vehicle types
-        Vehicle car = new Car(101, "Pooja", 15, "City Center");
-        Vehicle bike = new Bike(102, "Riya", 10, "Station Road");
-        Vehicle auto = new Auto(103, "Rahul", 12, "Market Area");
+       Vehicle c=new Car(101,"Mahesh",40,"Gwalior");
+       Vehicle b=new Bike(102,"Rajesh",20,"Gwalior");
+       Vehicle a=new Auto(103,"Suresh",10,"Gwalior");
+       c.getvehicleDetails();
+       c.getCurrentLocation();
+       c.calculateFare(15);
+       b.getvehicleDetails();
+       b.getCurrentLocation();
+       b.calculateFare(10);
+       a.getvehicleDetails();
+       a.getCurrentLocation();
+       a.calculateFare(10);
 
-        double rideDistance = 10; // km
-
-        // Polymorphism: process fare dynamically
-        processFare(car, rideDistance);
-        processFare(bike, rideDistance);
-        processFare(auto, rideDistance);
-
-        // Update location example
-        car.updateLocation("Airport");
-        System.out.println("Car new location: " + car.getCurrentLocation());
+	   
     }
 }

@@ -1,3 +1,4 @@
+//online food delivery system
 // Interface for discount functionality
 interface Discountable {
     void applyDiscount(double discountPercentage);
@@ -16,12 +17,12 @@ abstract class FoodItem implements Discountable {
         this.quantity = quantity;
     }
 
-    // Getters (encapsulation)
+    // Getters 
     public String getItemName() { return itemName; }
     public double getPrice() { return price; }
     public int getQuantity() { return quantity; }
 
-    // Setter for quantity (if needed)
+    // Setter
     public void setQuantity(int quantity) { this.quantity = quantity; }
 
     // Concrete method to display item details
@@ -57,7 +58,7 @@ class VegItem extends FoodItem {
 
     @Override
     public double calculateTotalPrice() {
-        // Total = price * quantity (no extra charges for veg items)
+       
         return getPrice() * getQuantity();
     }
 }

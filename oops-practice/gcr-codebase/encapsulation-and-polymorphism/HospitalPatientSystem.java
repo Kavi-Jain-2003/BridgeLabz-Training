@@ -1,118 +1,123 @@
-import java.util.ArrayList;
-import java.util.List;
-
-// Interface for managing medical records
+//HospitalPatientManagement
+//interface with abstract methods
 interface MedicalRecord {
-    void addRecord(String record);
-    void viewRecords();
+    public abstract void addRecord();
+
+    public abstract void viewRecord();
 }
 
-// Abstract Patient class
-abstract class Patient implements MedicalRecord {
+// abstract class
+abstract class Patient {
     private int patientId;
     private String name;
-    private int age;
-    private List<String> medicalHistory; // Encapsulated sensitive data
+    protected int age;
 
     Patient(int patientId, String name, int age) {
         this.patientId = patientId;
         this.name = name;
         this.age = age;
-        this.medicalHistory = new ArrayList<>();
     }
 
-    // Getters (Encapsulation)
-    public int getPatientId() { return patientId; }
-    public String getName() { return name; }
-    public int getAge() { return age; }
-
-    // Concrete method to display patient details
-    public void getPatientDetails() {
-        System.out.println("Patient ID: " + getPatientId());
-        System.out.println("Name: " + getName());
-        System.out.println("Age: " + getAge());
+    // getter
+    public int getpatientId() {
+        return patientId;
     }
 
-    // Abstract method to calculate patient bill
-    public abstract double calculateBill();
-
-    // MedicalRecord interface methods
-    @Override
-    public void addRecord(String record) {
-        medicalHistory.add(record);
+    public String getPatientName() {
+        return name;
     }
 
-    @Override
-    public void viewRecords() {
-        System.out.println("Medical History for " + getName() + ":");
-        if (medicalHistory.isEmpty()) {
-            System.out.println("No records available.");
-        } else {
-            for (String rec : medicalHistory) {
-                System.out.println("- " + rec);
-            }
-        }
+    public double getage() {
+        return age;
     }
+
+    // setter
+    public void setage(int age) {
+        this.age = age;
+    }
+    // abstract method
+
+    abstract double calculateBill();
+
+   
 }
 
-// InPatient class
-class InPatient extends Patient {
-    private int daysAdmitted;
-    private double dailyRoomCharge = 1000;
-    private double treatmentCost;
+// class extending abstract class
+class InPatient extends Patient implements MedicalRecord {
+    private double bedRate =200;
+    private double pillsBill=100;
+    private double days;
 
-    InPatient(int patientId, String name, int age, int daysAdmitted, double treatmentCost) {
+    InPatient(int patientId, String name, int age, double bedRate,double pillsBill,double days) {
         super(patientId, name, age);
-        this.daysAdmitted = daysAdmitted;
-        this.treatmentCost = treatmentCost;
+        this.bedRate = bedRate;
+        this.pillsBill = pillsBill;
+        this.days=days;
     }
 
+    // overriding abstarct class abstract method
     @Override
-    public double calculateBill() {
-        return (daysAdmitted * dailyRoomCharge) + treatmentCost;
+    double calculateBill() {
+        return (bedRate+pillsBill)*days;
+    }
+
+    // overidding interface mathod
+    @Override
+    public void addRecord() {
+        System.out.println("Adding inpatient medical records:");
+        
+    }
+
+    // overidding interface mathod
+    @Override
+    public void viewRecord() {
+        System.out.println("Patientid:"+getpatientId());
+        System.out.println("patient name:"+getPatientName());
+        System.out.println("patient age:"+getage());
+        System.out.println("Bill:"+calculateBill());
+        System.out.println();
     }
 }
 
-// OutPatient class
-class OutPatient extends Patient {
+class OutPatient extends Patient implements MedicalRecord {
+    private double pillsBill;
     private double consultationFee;
-    private double medicineCost;
 
-    OutPatient(int patientId, String name, int age, double consultationFee, double medicineCost) {
+    OutPatient(int patientId, String name, int age,double pillsBill,double consultationFee) {
         super(patientId, name, age);
-        this.consultationFee = consultationFee;
-        this.medicineCost = medicineCost;
+        this.pillsBill = pillsBill;
+        this.consultationFee=consultationFee;
     }
 
+    // overriding abstarct class abstract method
     @Override
-    public double calculateBill() {
-        return consultationFee + medicineCost;
+    double calculateBill() {
+        return (consultationFee+pillsBill);
+    }
+
+    // overidding interface mathod
+    @Override
+    public void addRecord() {
+        System.out.println("Adding outpatint medical record..");
+        
+    }
+
+    // overidding interface mathod
+    @Override
+    public void viewRecord() {
+        System.out.println("Patientid:"+getpatientId());
+        System.out.println("patient name:"+getPatientName());
+        System.out.println("patient age:"+getage());
+        System.out.println("Bill:"+calculateBill());
+        System.out.println();
     }
 }
 
-// Main class
 public class HospitalPatientSystem {
     public static void main(String[] args) {
-
-        // Polymorphism: Patient reference can point to InPatient or OutPatient
-        Patient p1 = new InPatient(101, "Pooja", 30, 5, 2000);
-        Patient p2 = new OutPatient(102, "Riya", 25, 500, 300);
-
-        // Add medical records
-        p1.addRecord("Admitted for surgery");
-        p1.addRecord("Post-op medication prescribed");
-        p2.addRecord("Routine checkup");
-        p2.addRecord("Prescribed painkillers");
-
-        // Display patient details, records, and billing
-        System.out.println("InPatient Details:");
-        p1.getPatientDetails();
-        p1.viewRecords();
-        System.out.println("Total Bill: " + p1.calculateBill() + "\n");
-
-        System.out.println("OutPatient Details:");
-        p2.getPatientDetails();
-        p2.viewRecords();
-        System.out.println("Total Bill: " + p2.calculateBill());
+       MedicalRecord i=new InPatient(101,"Pooja",34,200,100,3);
+	   MedicalRecord o=new OutPatient(102,"saluja",34,100,50);
+       i.viewRecord();
+       o.viewRecord();
     }
 }
