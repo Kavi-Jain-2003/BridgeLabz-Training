@@ -161,7 +161,7 @@ public class LibraryManagementSystem {
             System.out.println("Book Id:" + temp.bookId);
             System.out.println("genre:" + temp.genre);
             System.out.println("is book available:" + temp.availabilityStatus);
-            temp = temp.next;
+            temp = temp.prev;
         }
     }
 

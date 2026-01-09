@@ -1,4 +1,4 @@
-//processnode class
+//Circular Linked list :processnode class
 class ProcessNode {
     int pid;
     int burstTime;
@@ -23,17 +23,17 @@ public class RoundRobinSchedulingAlgorithm{
 
     // Add process at end
     void addProcess(int pid, int burstTime, int priority) {
-        ProcessNode p = new ProcessNode(pid, burstTime, priority);
+        ProcessNode pnode = new ProcessNode(pid, burstTime, priority);
 
         if (head == null) {
-            head = tail = p;
-            p.next = head;
+            head = tail = pnode;
+            pnode.next = head;
             return;
         }
 
-        tail.next = p;
-        p.next = head;
-        tail = p;
+        tail.next = pnode;
+        pnode.next = head;
+        tail = pnode;
     }
 
     // Remove process by PID

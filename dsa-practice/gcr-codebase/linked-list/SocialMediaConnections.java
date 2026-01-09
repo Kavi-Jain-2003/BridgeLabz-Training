@@ -1,4 +1,4 @@
-//friend node class
+//singly linked list:friend node class
 class FriendNode {
     int friendId;
     FriendNode next;
@@ -173,7 +173,7 @@ public class SocialMediaConnections {
 
         SocialMediaConnections sm = new SocialMediaConnections();
 
-        sm.addUser(1, "Kavi", 22);
+        sm.addUser(1, "Siya", 22);
         sm.addUser(2, "Riya", 21);
         sm.addUser(3, "Aman", 23);
 

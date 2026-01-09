@@ -26,7 +26,7 @@ public class TaskScheduler {
         TaskNode tnode = new TaskNode(taskId, taskName, dueDate, priority);
         if (head == null) {
             head = tail = tnode;
-            tnode.next = head;
+            tnode.next = head; //circular connection
             current = head;
             System.out.println("Task inserted successfully");
             return;
