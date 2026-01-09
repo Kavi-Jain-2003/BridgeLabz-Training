@@ -61,7 +61,7 @@ Submitted Assignment on Encapsulation and polymorphism.
 06-Jan-2026(Tuesday):
 Submitted oops scenerio based and leetcode problem
 
-**DSA Practice**
+**Week:04 DSA Practice**
 
 07-Jan-2026 (Wednesday):
 Completed story based problems
