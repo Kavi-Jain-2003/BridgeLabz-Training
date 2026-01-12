@@ -69,4 +69,7 @@ Completed story based problems
 08-Jan-2026(Thursday):
 Studied LinkedList concepts and submitted the linked list questions
 
+11-Jan-2026(Sunday):
+Completed oops scnerio-based and dsa practice leet-code problems
+
 
