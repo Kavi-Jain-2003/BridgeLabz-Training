@@ -1,3 +1,25 @@
+# =====================
+# Eclipse Workspace (MUST ignore)
+# =====================
+.metadata/
+
+# =====================
+# Java compiled files
+# =====================
 *.class
 /bin/
-/.metadata/
+build/
+target/
+
+# =====================
+# Eclipse project files
+# =====================
+.project
+.classpath
+.settings/
+
+# =====================
+# OS files
+# =====================
+.DS_Store
+Thumbs.db

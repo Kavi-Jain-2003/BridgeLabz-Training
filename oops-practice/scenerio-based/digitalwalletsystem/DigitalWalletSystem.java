@@ -13,7 +13,7 @@ public class DigitalWalletSystem {
         Wallet w2 = new Wallet(u2);
 
         // Add money
-        w1.addMoney(5000);
+        w1.addMoney(4000);
         w2.addMoney(3000);
 
         // Transfers
