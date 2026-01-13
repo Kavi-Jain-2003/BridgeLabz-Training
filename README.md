@@ -5,21 +5,23 @@ Organization: BridgeLabz Solutions Pvt. Ltd.
 
 ------------------------------------------------------------------------------------------------------------
 
-##About This Repository
+<h2>About This Repository</h2>
 
 This repository documents my daily and weekly learning progress at BridgeLabz, focusing on Java development, OOP concepts, DSA practice, and scenario-based problem solving.
 It serves as a structured record of assignments, hands-on labs, and continuous technical growth.
 
-###Objectives
-Track daily and weekly learning progress.
-Maintain transparency in skill development.
-Practice industry-standard Java coding.
-Strengthen problem-solving and logical thinking.
-Build consistency and discipline in coding.
+<h3>Objectives</h3>
+<ul>
+<li>Track daily and weekly learning progress.</li>
+<li>Maintain transparency in skill development.</li>
+<li>Practice industry-standard Java coding.</li>
+<li>Strengthen problem-solving and logical thinking.</li>
+<li>Build consistency and discipline in coding.</li>  
+</ul>
 
 ------------------------------------------------------------------------------------------------------------
 
-###Tech Stack & Tools
+<h2>Tech Stack & Tools</h3>
 
 | Category             | Technology                                            |
 | -------------------- | ----------------------------------------------------- |
@@ -32,72 +34,43 @@ Build consistency and discipline in coding.
 
 --------------------------------------------------------------------------------------------------------------
 
-##Repository Structure
+<h2>Repository Structure</h2>
 
 BridgeLabz-Training
 │
-
 ├── Branch: core-java-practice
-
 │   ├── gcr-codebase
-
 │   │   ├── programming-elements
-
 │   │   ├── control-flow
-
 │   │   ├── methods
-
 │   │   ├── arrays
-
 │   │   ├── extras
-
 │   │   └── strings
-
 │   ├── leet-code-codebase
-
 │   └── scenario-based
-
 │
-
 ├── Branch: oops-practice
-
 │   ├── gcr-codebase
-
 │   │   ├── class-and-object
-
 │   │   ├── constructors-instance-class-accessmodifiers
-
 │   │   ├── encapsulation-and-polymorphism
-
 │   │   ├── inheritance
-
 │   │   ├── object-oriented-design-principle
-
 │   │   └── this-static-final
-
 │   ├── leet-code-codebase
-
 │   └── scenario-based
-
-│
-
+|
 ├── Branch: dsa-practice
-
 │   ├── gcr-codebase
-
 │   │   └── linked-list
-
 │   ├── leet-code-codebase
-
 │   └── scenario-based
-
 │
-
 └── Branch: reviews
 
 --------------------------------------------------------------------------------------------------------------
 
-##Learning Methodology
+<h2>Learning Methodology</h2>
 
 | Focus Area             | Approach                                 |
 | ---------------------- | ---------------------------------------- |
@@ -108,9 +81,9 @@ BridgeLabz-Training
 | Continuous Improvement | Start simple, then optimize              |
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-##Weekly Learning Progress Report
+<h2>Weekly Learning Progress Report</h2>
 
-###Week 1: Development Tools & Java Basics
+<h3>Week 1: Development Tools & Java Basics</h3>
 
 20-Dec-2025 (Saturday):
 Installed and configured Notepad++, JDK, and GitHub
@@ -124,8 +97,8 @@ Studied the fundamentals of Java Programming Elements, including basic syntax an
 
 --------------------------------------------------------------------------------------------------------------
 
-###Week 2: Core Java Concepts
-###(Programming Elements, Control Flow, Arrays, Strings, Methods)
+<h3>Week 2: Core Java Concepts</h3>
+<h3>(Programming Elements, Control Flow, Arrays, Strings, Methods)</h3>
 
 22-Dec-2025 (Monday):
 Studied documentation
@@ -165,7 +138,7 @@ Snake and Ladder Problem
 
 --------------------------------------------------------------------------------------------------------------
 
-###Week 3: Java OOP Concepts
+<h3>Week 3: Java OOP Concepts</h3>
 
 31-Dec-2025 (Wednesday):
 Completed assignments on Classes and Objects
@@ -188,7 +161,7 @@ Solved LeetCode OOP questions
 
 --------------------------------------------------------------------------------------------------------------
 
-###Week 4: DSA Practice
+<h3>Week 4: DSA Practice</h3>
 
 07-Jan-2026 (Wednesday):
 Completed story-based DSA problems
@@ -206,10 +179,11 @@ Completed and submitted oops scenerio-based problems
 
 --------------------------------------------------------------------------------------------------------------
 
-##Progress Overview
-
-This repository acts as a complete audit trail of my learning journey, demonstrating:
-Daily and weekly coding consistency.
-Progressive learning from Core Java to OOP and DSA.
-Strong focus on logic building and real-world problems.
-Clean, structured, and maintainable Java code.
+<h2>Progress Overview</h2>
+<ul>
+<li>This repository acts as a complete audit trail of my learning journey, demonstrating:</li>
+<li>Daily and weekly coding consistency.</li>
+<li>Progressive learning from Core Java to OOP and DSA.</li>
+<li>Strong focus on logic building and real-world problems.</li>
+<li>Clean, structured, and maintainable Java code.</li>
+</ul>
