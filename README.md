@@ -1,15 +1,16 @@
-#**BridgeLabz-Training**
+#BridgeLabz-Training
 
 Trainee: Kavi Jain
 Organization: BridgeLabz Solutions Pvt. Ltd.
 
 ------------------------------------------------------------------------------------------------------------
 
-##**About This Repository**
+##About This Repository
 
 This repository documents my daily and weekly learning progress at BridgeLabz, focusing on Java development, OOP concepts, DSA practice, and scenario-based problem solving.
 It serves as a structured record of assignments, hands-on labs, and continuous technical growth.
-###**Objectives**
+
+###Objectives
 Track daily and weekly learning progress.
 Maintain transparency in skill development.
 Practice industry-standard Java coding.
@@ -18,7 +19,7 @@ Build consistency and discipline in coding.
 
 ------------------------------------------------------------------------------------------------------------
 
-###**Tech Stack & Tools**
+###Tech Stack & Tools
 
 | Category             | Technology                                            |
 | -------------------- | ----------------------------------------------------- |
@@ -31,7 +32,7 @@ Build consistency and discipline in coding.
 
 --------------------------------------------------------------------------------------------------------------
 
-##**Repository Structure**
+##Repository Structure
 
 BridgeLabz-Training
 │
@@ -56,6 +57,7 @@ BridgeLabz-Training
 │   │   └── this-static-final
 │   ├── leet-code-codebase
 │   └── scenario-based
+│
 ├── Branch: dsa-practice
 │   ├── gcr-codebase
 │   │   └── linked-list
@@ -63,10 +65,9 @@ BridgeLabz-Training
 │   └── scenario-based
 │
 └── Branch: reviews
-
 --------------------------------------------------------------------------------------------------------------
 
-##**Learning Methodology**
+##Learning Methodology
 
 | Focus Area             | Approach                                 |
 | ---------------------- | ---------------------------------------- |
@@ -77,9 +78,9 @@ BridgeLabz-Training
 | Continuous Improvement | Start simple, then optimize              |
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-##**Weekly Learning Progress Report**
+##Weekly Learning Progress Report
 
-###**Week 1: Development Tools & Java Basics**
+###Week 1: Development Tools & Java Basics
 
 20-Dec-2025 (Saturday):
 Installed and configured Notepad++, JDK, and GitHub
@@ -93,8 +94,8 @@ Studied the fundamentals of Java Programming Elements, including basic syntax an
 
 --------------------------------------------------------------------------------------------------------------
 
-###**Week 2: Core Java Concepts**
-###**(Programming Elements, Control Flow, Arrays, Strings, Methods)**
+###Week 2: Core Java Concepts
+###(Programming Elements, Control Flow, Arrays, Strings, Methods)
 
 22-Dec-2025 (Monday):
 Studied documentation
@@ -134,7 +135,7 @@ Snake and Ladder Problem
 
 --------------------------------------------------------------------------------------------------------------
 
-###**Week 3: Java OOP Concepts**
+###Week 3: Java OOP Concepts
 
 31-Dec-2025 (Wednesday):
 Completed assignments on Classes and Objects
@@ -157,7 +158,7 @@ Solved LeetCode OOP questions
 
 --------------------------------------------------------------------------------------------------------------
 
-###**Week 4: DSA Practice**
+###Week 4: DSA Practice
 
 07-Jan-2026 (Wednesday):
 Completed story-based DSA problems
@@ -175,7 +176,7 @@ Completed and submitted oops scenerio-based problems
 
 --------------------------------------------------------------------------------------------------------------
 
-##**Progress Overview**
+##Progress Overview
 
 This repository acts as a complete audit trail of my learning journey, demonstrating:
 Daily and weekly coding consistency.
