@@ -1,4 +1,4 @@
-#BridgeLabz-Training
+<h1>BridgeLabz-Training</h1>
 
 Trainee: Kavi Jain
 Organization: BridgeLabz Solutions Pvt. Ltd.
@@ -36,35 +36,65 @@ Build consistency and discipline in coding.
 
 BridgeLabz-Training
 │
+
 ├── Branch: core-java-practice
+
 │   ├── gcr-codebase
+
 │   │   ├── programming-elements
+
 │   │   ├── control-flow
+
 │   │   ├── methods
+
 │   │   ├── arrays
+
 │   │   ├── extras
+
 │   │   └── strings
+
 │   ├── leet-code-codebase
+
 │   └── scenario-based
+
 │
+
 ├── Branch: oops-practice
+
 │   ├── gcr-codebase
+
 │   │   ├── class-and-object
+
 │   │   ├── constructors-instance-class-accessmodifiers
+
 │   │   ├── encapsulation-and-polymorphism
+
 │   │   ├── inheritance
+
 │   │   ├── object-oriented-design-principle
+
 │   │   └── this-static-final
+
 │   ├── leet-code-codebase
+
 │   └── scenario-based
+
 │
+
 ├── Branch: dsa-practice
+
 │   ├── gcr-codebase
+
 │   │   └── linked-list
+
 │   ├── leet-code-codebase
+
 │   └── scenario-based
+
 │
+
 └── Branch: reviews
+
 --------------------------------------------------------------------------------------------------------------
 
 ##Learning Methodology
