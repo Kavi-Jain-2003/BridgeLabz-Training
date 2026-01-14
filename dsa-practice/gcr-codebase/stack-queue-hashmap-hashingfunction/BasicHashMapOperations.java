@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-class BasicHashMapOperations {
+class MyHashMap {
     // Define the size of the hash table
     private final int SIZE = 1000;
     
@@ -79,7 +79,7 @@ class BasicHashMapOperations {
     }
 }
 
-public class CustomHashMapDemo {
+public class BasicHashMapOperations {
     public static void main(String[] args) {
         MyHashMap map = new MyHashMap();
         
