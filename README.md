@@ -139,8 +139,12 @@ Submitted LinkedList-based problems
 Continued OOP scenario-based problems
 Practiced DSA problems on LeetCode
 
-13-Jan-2026(Monday)
+13-Jan-2026(Tuesday):
 Completed and submitted oops scenerio-based problems
+
+14-Jan-2026(Wednesday):
+Studied the stack,queue,hashmap and hashing functions concpt.
+Completed and submitted problems based on it.
 
 --------------------------------------------------------------------------------------------------------------
 
