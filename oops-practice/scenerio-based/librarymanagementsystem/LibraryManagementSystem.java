@@ -22,11 +22,11 @@ public class LibraryManagementSystem {
                 throw new BookNotAvailableException(b1.getTitle() + " is not available");
             }
             b1.setAvailable(false);
-            Transaction t1 = new Transaction(m1, b1); // constructor exists ✅
+            Transaction t1 = new Transaction(m1, b1); // constructor exists 
             System.out.println("Book issued: " + b1.getTitle() + " to " + m1.getName());
 
             // Return after 5 days late
-            t1.returnBook(5); // method exists ✅
+            t1.returnBook(5); // method exists 
             double fine = studentCalculator.calculateFine(t1.getDaysLate());
             System.out.println("Fine for " + m1.getName() + ": ₹" + fine);
 

@@ -8,6 +8,7 @@ public class Member extends User {
         super(id, name);
         this.memberType = memberType;
     }
+    
 
     public String getMemberType() {
         return memberType;
