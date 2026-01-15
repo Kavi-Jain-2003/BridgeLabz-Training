@@ -149,17 +149,18 @@ Completed and submitted problems based on it.
 --------------------------------------------------------------------------------------------------------------
 
 <h2>Scenerio-based</h2>
-1.Online Banking System
-2.E-commerce Order Mangement System
-3.Student Course Registration System
-4.Inventory Management System
-5.Cab Booking / Ride Management System
-6.Hospital Management System
-7.Library Manangement System
-8.Online Examination System
-9.Hotel Reservation Systsm
-10.Digital Wallet System
-
+<ol>
+<li>Online Banking System</li>
+<li>E-commerce Order Mangement System</li>
+<li>Student Course Registration System</li>
+<li>Inventory Management System</li>
+<li>Cab Booking / Ride Management System</li>
+<li>Hospital Management System</li>
+<li>Library Manangement System</li>
+<li>Online Examination System</li>
+<li>Hotel Reservation Systsm</li>
+<li>Digital Wallet System</li>
+</ol>
 
 <h2>Progress Overview</h2>
 <ul>
