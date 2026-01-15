@@ -148,6 +148,19 @@ Completed and submitted problems based on it.
 
 --------------------------------------------------------------------------------------------------------------
 
+<h2>Scenerio-based</h2>
+1.Online Banking System
+2.E-commerce Order Mangement System
+3.Student Course Registration System
+4.Inventory Management System
+5.Cab Booking / Ride Management System
+6.Hospital Management System
+7.Library Manangement System
+8.Online Examination System
+9.Hotel Reservation Systsm
+10.Digital Wallet System
+
+
 <h2>Progress Overview</h2>
 <ul>
 <li>This repository acts as a complete audit trail of my learning journey, demonstrating:</li>
