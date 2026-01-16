@@ -19,7 +19,7 @@ public class BubbleSortOnMarks {
     }
 
     public static void main(String[] args) {
-        int[] marks = {59, 73, 88, 84, 92};
+        int[] marks = {59, 73, 98, 64, 92};
         bubbleSort(marks);
         System.out.println(Arrays.toString(marks));
     }
