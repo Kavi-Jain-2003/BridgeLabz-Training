@@ -1,0 +1,27 @@
+
+public class CompareStringBufferAndStringBuilder {
+	public static void main(String[] args)
+	{
+		long startTime,endTime;
+		//testing stringbuilder performance
+		startTime=System.nanoTime();
+		StringBuilder sb1=new StringBuilder();
+		for(int i=0; i<10000; i++)
+		{
+			sb1.append("performance tracker");
+		}
+		endTime=System.nanoTime();
+		System.out.println("StringBuilder time:"+(endTime-startTime)+" ns");
+		//testing stringbuffer performance
+		startTime=System.nanoTime();
+		StringBuffer sb2=new StringBuffer();
+		for(int i=0; i<10000; i++)
+		{
+			sb2.append("performance tracker");
+		}
+		endTime=System.nanoTime();
+		System.out.println("StringBuffer time:"+(endTime-startTime)+" ns");
+		
+	}
+
+}

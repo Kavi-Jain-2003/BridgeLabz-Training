@@ -1,0 +1,17 @@
+
+public class CompareStringBufferAndStringBuilder {
+	public static void main(String[] args)
+	{
+		StringBuilder sb1=new StringBuilder();
+		StringBuffer sb2=new StringBuffer();
+		String[] arr= {"hello","world","of","Java"};
+		int n=arr.length;
+		for(int i=0; i<n; i++)
+		{
+			sb1.append(arr[i]);
+			sb2.append(arr[i]);
+		}
+		
+	}
+
+}
