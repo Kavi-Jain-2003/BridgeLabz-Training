@@ -7,7 +7,7 @@ public class CountTheOccurrenceOfAWordInAFileUsingFileReader {
     public static void main(String[] args) {
 
         String filePath = "sample.txt";
-        String targetWord = "Java";
+        String targetedWord = "Java";
         int count = 0;
 
         try {
@@ -24,7 +24,7 @@ public class CountTheOccurrenceOfAWordInAFileUsingFileReader {
 
                 // Check each word
                 for (String word : words) {
-                    if (word.equals(targetWord)) {
+                    if (word.equals(targetedWord)) {
                         count++;
                     }
                 }
@@ -37,6 +37,6 @@ public class CountTheOccurrenceOfAWordInAFileUsingFileReader {
         }
 
         // Print result
-        System.out.println("Occurrences of '" + targetWord + "': " + count);
+        System.out.println("Occurrences of '" + targetedWord + "': " + count);
     }
 }
