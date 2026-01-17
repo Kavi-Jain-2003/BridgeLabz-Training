@@ -46,6 +46,37 @@ It serves as a structured record of assignments, hands-on labs, and continuous t
 | Continuous Improvement | Start simple, then optimize              |
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<h2>Core-Java-Practice-Scenerio-based</h2>
+<ol>
+<li>BMI Fitness Tracker</li>
+<li>Bus Route Distance Tracker</li>
+<li>Coffee Counter Chronicles</li>
+<li>Digital Watch Simulation</li>
+<li>Election Booth Manager</li>
+<li>Festival Lucky Draw</li>
+<li>Metro Smart Card Fare Reduction</li>
+<li>ticket Booking App</li>
+<li>Employee Wage Computation Problem</li>
+<li>Snake Ladder Problem</li>
+<li>Line Comparison Problem</li>
+</ol>
+
+<h2>OOPs-Scenerio-based</h2>
+<ol>
+<li>Online Banking System</li>
+<li>E-commerce Order Mangement System</li>
+<li>Student Course Registration System</li>
+<li>Inventory Management System</li>
+<li>Cab Booking / Ride Management System</li>
+<li>Hospital Management System</li>
+<li>Library Manangement System</li>
+<li>Online Examination System</li>
+<li>Hotel Reservation System</li>
+<li>Digital Wallet System</li>
+</ol>
+
+-----------------------------------------------------------------------------------
 <h2>Weekly Learning Progress Report</h2>
 
 <h3>Week 1: Development Tools & Java Basics</h3>
@@ -146,21 +177,11 @@ Completed and submitted oops scenerio-based problems
 Studied the stack,queue,hashmap and hashing functions concpt.
 Completed and submitted problems based on it.
 
+16-Jan-2026(Friday):
+Studied sorting algorithms and submitted them.
+
 --------------------------------------------------------------------------------------------------------------
 
-<h2>Scenerio-based</h2>
-<ol>
-<li>Online Banking System</li>
-<li>E-commerce Order Mangement System</li>
-<li>Student Course Registration System</li>
-<li>Inventory Management System</li>
-<li>Cab Booking / Ride Management System</li>
-<li>Hospital Management System</li>
-<li>Library Manangement System</li>
-<li>Online Examination System</li>
-<li>Hotel Reservation Systsm</li>
-<li>Digital Wallet System</li>
-</ol>
 
 <h2>Progress Overview</h2>
 <ul>
