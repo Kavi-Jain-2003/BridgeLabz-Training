@@ -1,15 +1,15 @@
-package addressbookproblem.controller;
-
+package addressbookproblem.main;
+import addressbookproblem.controller.ContactController;
 import addressbookproblem.model.Contact;
-import addressbookproblem.service.ContactService;
+
 import java.util.Scanner;
+public class AddressBookMain {
+    public static void main(String[] args) {
+        System.out.println("Welcome to address book");
+         Scanner sc = new Scanner(System.in);
+        ContactController controller = new ContactController();
 
-public class ContactController {
-
-    private ContactService service = new ContactService();
-    private Scanner sc = new Scanner(System.in);
-
-    public void addContact() {
+        System.out.println("Enter Contact Details");
 
         System.out.print("First Name: ");
         String firstName = sc.nextLine();
@@ -29,7 +29,7 @@ public class ContactController {
         System.out.print("Zip: ");
         String zip = sc.nextLine();
 
-        System.out.print("Phone Number: ");
+        System.out.print("Phone: ");
         String phone = sc.nextLine();
 
         System.out.print("Email: ");
@@ -40,8 +40,9 @@ public class ContactController {
                 city, state, zip, phone, email
         );
 
-        service.createContact(contact);
+        controller.addContact(contact);
 
-        System.out.println(" Contact added successfully!");
+        System.out.println("Contact added to Address Book");
+        sc.close();
     }
 }
