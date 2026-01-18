@@ -22,5 +22,8 @@ public class ContactController {
 public boolean editContact(String name, Contact updatedContact) {
     return service.editContact(name, updatedContact);
 }
+public boolean deleteContact(String firstName) {
+    return service.deleteContact(firstName);
+}
 
 }
