@@ -43,8 +43,7 @@ public class AddressBookMain {
 
         Contact contact = new Contact(
                 firstName, lastName, address,
-                city, state, zip, phone, email
-        );
+                city, state, zip, phone, email);
 
         controller.addContact(contact);
         System.out.println("✅ Contact added to Address Book");
@@ -82,12 +81,22 @@ public class AddressBookMain {
 
         Contact updatedContact = new Contact(
                 nameToEdit, newLastName, newAddress,
-                newCity, newState, newZip, newPhone, newEmail
-        );
+                newCity, newState, newZip, newPhone, newEmail);
 
         boolean updated = controller.editContact(nameToEdit, updatedContact);
 
         System.out.println(updated ? "Contact Updated" : "Contact Not Found");
+
+        System.out.print("\nEnter First Name to Delete: ");
+        String nameToDelete = sc.nextLine();
+
+        boolean deleted = controller.deleteContact(nameToDelete);
+
+        if (deleted) {
+            System.out.println("Contact deleted successfully");
+        } else {
+            System.out.println("Contact not found");
+        }
 
         sc.close();
     }
