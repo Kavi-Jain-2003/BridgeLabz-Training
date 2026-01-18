@@ -13,6 +13,20 @@ public class Order {
         this.customer = customer;
         this.status = "CREATED";
     }
+    public String getOrderId()
+    {
+        return orderId;
+    }
+
+        public String getStatus()
+    {
+        return status;
+    }
+        public Customer getCustomer()
+    {
+        return customer;
+    }
+    
 
     public void placeOrder() {
         if (product == null) {
@@ -27,4 +41,5 @@ public class Order {
         status = "CANCELLED";
         System.out.println("Order cancelled");
     }
+    
 }

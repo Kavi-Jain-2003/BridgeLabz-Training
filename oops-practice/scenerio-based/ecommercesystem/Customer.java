@@ -13,4 +13,8 @@ public class Customer {
 	{
 		return customerName;
 	}
+	public String getCustomerId()
+	{
+		return customerId;
+	}
 }

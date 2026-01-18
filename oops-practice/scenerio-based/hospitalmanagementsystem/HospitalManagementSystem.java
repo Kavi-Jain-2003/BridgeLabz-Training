@@ -59,7 +59,7 @@ public class HospitalManagementSystem implements HospitalService {
 
         try {
             Appointment a1 = hospital.bookAppointment(p1, d1, "2026-01-15");
-            Appointment a2 = hospital.bookAppointment(p2, d1, "2026-01-15"); // ❌ Exception
+            Appointment a2 = hospital.bookAppointment(p2, d1, "2026-01-15"); // Exception
         } catch (AppointmentNotAvailableException e) {
             System.out.println(e.getMessage());
         }
