@@ -15,4 +15,27 @@ public class ContactService {
     public AddressBook getAddressBook() {
         return repository.getAddressBook();
     }
+    public void displayContacts() {
+    repository.getAddressBook()
+              .getContacts()
+              .forEach(System.out::println);
+}
+public boolean editContact(String name, Contact updatedContact) {
+
+    Contact existing = repository.findByFirstName(name);
+
+    if (existing != null) {
+        existing.setLastName(updatedContact.getLastName());
+        existing.setAddress(updatedContact.getAddress());
+        existing.setCity(updatedContact.getCity());
+        existing.setState(updatedContact.getState());
+        existing.setZip(updatedContact.getZip());
+        existing.setPhoneNumber(updatedContact.getPhoneNumber());
+        existing.setEmail(updatedContact.getEmail());
+        return true;
+    }
+    return false;
+}
+
+
 }

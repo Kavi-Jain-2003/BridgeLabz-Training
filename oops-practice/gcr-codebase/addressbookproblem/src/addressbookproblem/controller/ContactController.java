@@ -16,4 +16,11 @@ public class ContactController {
     public AddressBook getAddressBook() {
         return service.getAddressBook();
     }
+    public void displayContacts() {
+    service.displayContacts();
+}
+public boolean editContact(String name, Contact updatedContact) {
+    return service.editContact(name, updatedContact);
+}
+
 }

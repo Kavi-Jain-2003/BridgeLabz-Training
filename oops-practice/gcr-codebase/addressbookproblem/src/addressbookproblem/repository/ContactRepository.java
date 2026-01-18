@@ -14,4 +14,13 @@ public class ContactRepository {
     public AddressBook getAddressBook() {
         return addressBook;
     }
+    public Contact findByFirstName(String firstName) {
+    for (Contact c : addressBook.getContacts()) {
+        if (c.getFirstName().equalsIgnoreCase(firstName)) {
+            return c;
+        }
+    }
+    return null;
+}
+
 }

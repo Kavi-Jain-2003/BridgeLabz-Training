@@ -1,15 +1,21 @@
 package addressbookproblem.main;
+
 import addressbookproblem.controller.ContactController;
 import addressbookproblem.model.Contact;
 
 import java.util.Scanner;
+
 public class AddressBookMain {
+
     public static void main(String[] args) {
-        System.out.println("Welcome to address book");
-         Scanner sc = new Scanner(System.in);
+
+        System.out.println("Welcome to Address Book");
+
+        Scanner sc = new Scanner(System.in);
         ContactController controller = new ContactController();
 
-        System.out.println("Enter Contact Details");
+        // -------- ADD CONTACT --------
+        System.out.println("\nEnter Contact Details");
 
         System.out.print("First Name: ");
         String firstName = sc.nextLine();
@@ -41,8 +47,48 @@ public class AddressBookMain {
         );
 
         controller.addContact(contact);
+        System.out.println("✅ Contact added to Address Book");
 
-        System.out.println("Contact added to Address Book");
+        // -------- DISPLAY CONTACTS --------
+        System.out.println("\n--- Address Book Contacts ---");
+        controller.displayContacts();
+
+        // -------- EDIT CONTACT --------
+        System.out.print("\nEnter First Name to Edit: ");
+        String nameToEdit = sc.nextLine();
+
+        System.out.println("Enter New Details");
+
+        System.out.print("New Last Name: ");
+        String newLastName = sc.nextLine();
+
+        System.out.print("New Address: ");
+        String newAddress = sc.nextLine();
+
+        System.out.print("New City: ");
+        String newCity = sc.nextLine();
+
+        System.out.print("New State: ");
+        String newState = sc.nextLine();
+
+        System.out.print("New Zip: ");
+        String newZip = sc.nextLine();
+
+        System.out.print("New Phone: ");
+        String newPhone = sc.nextLine();
+
+        System.out.print("New Email: ");
+        String newEmail = sc.nextLine();
+
+        Contact updatedContact = new Contact(
+                nameToEdit, newLastName, newAddress,
+                newCity, newState, newZip, newPhone, newEmail
+        );
+
+        boolean updated = controller.editContact(nameToEdit, updatedContact);
+
+        System.out.println(updated ? "Contact Updated" : "Contact Not Found");
+
         sc.close();
     }
 }
