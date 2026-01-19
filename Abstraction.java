@@ -82,6 +82,7 @@ public class Abstraction
         SavingAccount s=new SavingAccount("Pooja",2000,"Saving account");
         CurrentAccount c=new CurrentAccount("Riya",3000,"Current Account");
         s.displayInfo();
+        s.getName();
         s.interestCalculation();
         c.displayInfo();        
         c.interestCalculation();
