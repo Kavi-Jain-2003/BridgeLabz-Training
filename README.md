@@ -180,6 +180,22 @@ Completed and submitted problems based on it.
 16-Jan-2026(Friday):
 Studied sorting algorithms and submitted them.
 
+17-Jan-2026(Saturday):
+Studied the material of StringBuilder, StringBuffer, FileReader, InputStreamReader, linear Search and Binary Search. Submitted their problems.
+
+18-Jan-2026(Sunday):
+Completed someusecse of addressbookproblem
+
+19-Jan-2026(Monday):
+Oops-practice Review. Studied the Algorithm's runtime analysis and Big-O Notation.
+
+20-Jan-2026(Tuesday):
+Submitted Algorithm's runtime analysis and Big-O Notation.
+
+
+
+
+
 --------------------------------------------------------------------------------------------------------------
 
 
