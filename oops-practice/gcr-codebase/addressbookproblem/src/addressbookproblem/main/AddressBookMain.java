@@ -3,6 +3,7 @@ package addressbookproblem.main;
 import addressbookproblem.controller.ContactController;
 import addressbookproblem.model.Contact;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class AddressBookMain {
@@ -50,16 +51,16 @@ public class AddressBookMain {
 
             boolean added = controller.addContact(contact);
 
-    if (added) {
-        System.out.println("Contact added to Address Book");
-    } else {
-        System.out.println("Duplicate contact! Not added.");
-    }
+            if (added) {
+                System.out.println("Contact added to Address Book");
+            } else {
+                System.out.println("Duplicate contact! Not added.");
+            }
 
-    System.out.print("Do you want to add another contact? (yes/no): ");
-    choice = sc.nextLine();
+            System.out.print("Do you want to add another contact? (yes/no): ");
+            choice = sc.nextLine();
 
-} while (choice.equalsIgnoreCase("yes"));
+        } while (choice.equalsIgnoreCase("yes"));
 
         // -------- DISPLAY CONTACTS --------
         System.out.println("\n--- Address Book Contacts ---");
@@ -96,9 +97,6 @@ public class AddressBookMain {
                 nameToEdit, newLastName, newAddress,
                 newCity, newState, newZip, newPhone, newEmail);
 
-       
-
-
         boolean updated = controller.editContact(nameToEdit, updatedContact);
         System.out.println(updated ? " Contact Updated" : " Contact Not Found");
 
@@ -110,7 +108,21 @@ public class AddressBookMain {
 
         System.out.println(deleted ? " Contact Deleted" : " Contact Not Found");
 
-       
+        // -------- SEARCH PERSON BY CITY OR STATE --------
+        System.out.print("\nEnter City or State to search for persons: ");
+        String cityOrState = sc.nextLine();
+
+        List<Contact> foundContacts = controller.searchPerson(cityOrState);
+
+        if (foundContacts.isEmpty()) {
+            System.out.println(" No contacts found in " + cityOrState);
+        } else {
+            System.out.println(" Contacts found in " + cityOrState + ":");
+            for (Contact contact : foundContacts) {
+                System.out.println(contact);
+            }
+        }
+
         sc.close();
     }
 }

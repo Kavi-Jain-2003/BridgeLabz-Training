@@ -9,6 +9,17 @@ import addressbookproblem.repository.ContactRepository;
 public class ContactService {
 
     private ContactRepository repository = new ContactRepository();
+    public boolean addNewContact(Contact contact) {
+    // Check for duplicate first
+    if (repository.isDuplicate(contact)) {
+        return false; // duplicate, do not add
+    }
+
+    // Not duplicate, safe to add
+    repository.addContact(contact);
+    return true;
+}
+
 
     public AddressBook getAddressBook() {
         return repository.getAddressBook();
@@ -56,15 +67,8 @@ public boolean deleteContact(String firstName) {
     return repository.deleteContactByFirstName(firstName);
 }
 
-public boolean addNewContact(Contact contact) {
-    // Check for duplicate first
-    if (repository.isDuplicate(contact)) {
-        return false; // duplicate, do not add
-    }
-
-    // Not duplicate, safe to add
-    repository.addContact(contact);
-    return true;
+public List<Contact> searchPerson(String cityOrState) {
+    return repository.searchByCityOrState(cityOrState);
 }
 
 }

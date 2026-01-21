@@ -1,5 +1,6 @@
 package addressbookproblem.repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import addressbookproblem.model.AddressBook;
@@ -52,5 +53,19 @@ public class ContactRepository {
         }
         return false; // no duplicate
     }
+
+    
+    public List<Contact> searchByCityOrState(String cityOrState) {
+    List<Contact> result = new ArrayList<>();
+
+    for (Contact contact : addressBook.getContacts()) {
+        if (contact.getCity().equalsIgnoreCase(cityOrState) ||
+            contact.getState().equalsIgnoreCase(cityOrState)) {
+            result.add(contact);
+        }
+    }
+
+    return result;
+}
 
 }
