@@ -10,10 +10,6 @@ public class ContactService {
 
     private ContactRepository repository = new ContactRepository();
 
-    public void addNewContact(Contact contact) {
-        repository.addContact(contact);
-    }
-
     public AddressBook getAddressBook() {
         return repository.getAddressBook();
     }
@@ -60,5 +56,15 @@ public boolean deleteContact(String firstName) {
     return repository.deleteContactByFirstName(firstName);
 }
 
+public boolean addNewContact(Contact contact) {
+    // Check for duplicate first
+    if (repository.isDuplicate(contact)) {
+        return false; // duplicate, do not add
+    }
+
+    // Not duplicate, safe to add
+    repository.addContact(contact);
+    return true;
+}
 
 }

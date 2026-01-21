@@ -25,24 +25,32 @@ public class ContactRepository {
         }
         return null;
     }
+
     public boolean deleteContactByFirstName(String firstName) {
 
-    // Get all contacts
-    List<Contact> contacts = addressBook.getContacts();
+        // Get all contacts
+        List<Contact> contacts = addressBook.getContacts();
 
-    // Traverse list to find matching contact
-    for (Contact contact : contacts) {
+        // Traverse list to find matching contact
+        for (Contact contact : contacts) {
 
-        if (contact.getFirstName().equalsIgnoreCase(firstName)) {
-            contacts.remove(contact);   // delete contact
-            return true;               // deletion successful
+            if (contact.getFirstName().equalsIgnoreCase(firstName)) {
+                contacts.remove(contact); // delete contact
+                return true; // deletion successful
+            }
         }
+
+        // If no contact found
+        return false;
     }
 
-    // If no contact found
-    return false;
-}
-
-
+    public boolean isDuplicate(Contact contact) {
+        for (Contact c : addressBook.getContacts()) {
+            if (c.equals(contact)) { // uses overridden equals()
+                return true; // duplicate found
+            }
+        }
+        return false; // no duplicate
+    }
 
 }

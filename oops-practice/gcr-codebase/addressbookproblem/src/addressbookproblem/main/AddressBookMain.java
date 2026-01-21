@@ -46,16 +46,20 @@ public class AddressBookMain {
 
             Contact contact = new Contact(
                     firstName, lastName, address,
-                    city, state, zip, phone, email
-            );
+                    city, state, zip, phone, email);
 
-            controller.addContact(contact);
-            System.out.println("Contact added to Address Book");
+            boolean added = controller.addContact(contact);
 
-            System.out.print("Do you want to add another contact? (yes/no): ");
-            choice = sc.nextLine();
+    if (added) {
+        System.out.println("Contact added to Address Book");
+    } else {
+        System.out.println("Duplicate contact! Not added.");
+    }
 
-        } while (choice.equalsIgnoreCase("yes"));
+    System.out.print("Do you want to add another contact? (yes/no): ");
+    choice = sc.nextLine();
+
+} while (choice.equalsIgnoreCase("yes"));
 
         // -------- DISPLAY CONTACTS --------
         System.out.println("\n--- Address Book Contacts ---");
@@ -90,8 +94,10 @@ public class AddressBookMain {
 
         Contact updatedContact = new Contact(
                 nameToEdit, newLastName, newAddress,
-                newCity, newState, newZip, newPhone, newEmail
-        );
+                newCity, newState, newZip, newPhone, newEmail);
+
+       
+
 
         boolean updated = controller.editContact(nameToEdit, updatedContact);
         System.out.println(updated ? " Contact Updated" : " Contact Not Found");
@@ -104,6 +110,7 @@ public class AddressBookMain {
 
         System.out.println(deleted ? " Contact Deleted" : " Contact Not Found");
 
+       
         sc.close();
     }
 }
