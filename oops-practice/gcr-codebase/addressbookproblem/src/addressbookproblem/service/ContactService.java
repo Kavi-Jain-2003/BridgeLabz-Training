@@ -81,5 +81,14 @@ public class ContactService {
     public Map<String, List<Contact>> viewPersonsByState() {
         return repository.getPersonsByState();
     }
+    //usecase10
+    public Map<String, Integer> countContactsByCity() {
+    return repository.countByCity();
+}
+
+public Map<String, Integer> countContactsByState() {
+    return repository.countByState();
+}
+
 
 }

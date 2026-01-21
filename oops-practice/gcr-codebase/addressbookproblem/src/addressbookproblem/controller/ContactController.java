@@ -43,5 +43,13 @@ public Map<String, List<Contact>> viewPersonsByCity() {
 public Map<String, List<Contact>> viewPersonsByState() {
     return service.viewPersonsByState();
 }
+//usecase10
+public Map<String, Integer> countByCity() {
+    return service.countContactsByCity();
+}
+
+public Map<String, Integer> countByState() {
+    return service.countContactsByState();
+}
 
 }
