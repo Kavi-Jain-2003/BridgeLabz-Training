@@ -14,39 +14,48 @@ public class AddressBookMain {
         Scanner sc = new Scanner(System.in);
         ContactController controller = new ContactController();
 
-        // -------- ADD CONTACT --------
-        System.out.println("\nEnter Contact Details");
+        String choice;
 
-        System.out.print("First Name: ");
-        String firstName = sc.nextLine();
+        // -------- ADD MULTIPLE CONTACTS --------
+        do {
+            System.out.println("\nEnter Contact Details");
 
-        System.out.print("Last Name: ");
-        String lastName = sc.nextLine();
+            System.out.print("First Name: ");
+            String firstName = sc.nextLine();
 
-        System.out.print("Address: ");
-        String address = sc.nextLine();
+            System.out.print("Last Name: ");
+            String lastName = sc.nextLine();
 
-        System.out.print("City: ");
-        String city = sc.nextLine();
+            System.out.print("Address: ");
+            String address = sc.nextLine();
 
-        System.out.print("State: ");
-        String state = sc.nextLine();
+            System.out.print("City: ");
+            String city = sc.nextLine();
 
-        System.out.print("Zip: ");
-        String zip = sc.nextLine();
+            System.out.print("State: ");
+            String state = sc.nextLine();
 
-        System.out.print("Phone: ");
-        String phone = sc.nextLine();
+            System.out.print("Zip: ");
+            String zip = sc.nextLine();
 
-        System.out.print("Email: ");
-        String email = sc.nextLine();
+            System.out.print("Phone: ");
+            String phone = sc.nextLine();
 
-        Contact contact = new Contact(
-                firstName, lastName, address,
-                city, state, zip, phone, email);
+            System.out.print("Email: ");
+            String email = sc.nextLine();
 
-        controller.addContact(contact);
-        System.out.println("✅ Contact added to Address Book");
+            Contact contact = new Contact(
+                    firstName, lastName, address,
+                    city, state, zip, phone, email
+            );
+
+            controller.addContact(contact);
+            System.out.println("Contact added to Address Book");
+
+            System.out.print("Do you want to add another contact? (yes/no): ");
+            choice = sc.nextLine();
+
+        } while (choice.equalsIgnoreCase("yes"));
 
         // -------- DISPLAY CONTACTS --------
         System.out.println("\n--- Address Book Contacts ---");
@@ -81,22 +90,19 @@ public class AddressBookMain {
 
         Contact updatedContact = new Contact(
                 nameToEdit, newLastName, newAddress,
-                newCity, newState, newZip, newPhone, newEmail);
+                newCity, newState, newZip, newPhone, newEmail
+        );
 
         boolean updated = controller.editContact(nameToEdit, updatedContact);
+        System.out.println(updated ? " Contact Updated" : " Contact Not Found");
 
-        System.out.println(updated ? "Contact Updated" : "Contact Not Found");
-
+        // -------- DELETE CONTACT --------
         System.out.print("\nEnter First Name to Delete: ");
         String nameToDelete = sc.nextLine();
 
         boolean deleted = controller.deleteContact(nameToDelete);
 
-        if (deleted) {
-            System.out.println("Contact deleted successfully");
-        } else {
-            System.out.println("Contact not found");
-        }
+        System.out.println(deleted ? " Contact Deleted" : " Contact Not Found");
 
         sc.close();
     }
