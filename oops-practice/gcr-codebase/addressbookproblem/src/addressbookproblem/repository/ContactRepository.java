@@ -127,7 +127,34 @@ public List<Contact> getSortedContacts() {
 
     return contacts;
 }
+public List<Contact> sortByCity() {
 
+    List<Contact> contacts = addressBook.getContacts();
+
+    Collections.sort(contacts, Comparator.comparing(
+            Contact::getCity, String.CASE_INSENSITIVE_ORDER));
+
+    return contacts;
+}
+
+public List<Contact> sortByState() {
+
+    List<Contact> contacts = addressBook.getContacts();
+
+    Collections.sort(contacts, Comparator.comparing(
+            Contact::getState, String.CASE_INSENSITIVE_ORDER));
+
+    return contacts;
+}
+
+public List<Contact> sortByZip() {
+
+    List<Contact> contacts = addressBook.getContacts();
+
+    Collections.sort(contacts, Comparator.comparing(Contact::getZip));
+
+    return contacts;
+}
 
 
 

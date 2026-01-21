@@ -57,5 +57,16 @@ public class ContactController {
     public List<Contact> sortContactsByName() {
         return service.sortContactsByName();
     }
+public List<Contact> sortByCity() {
+    return service.sortContactsByCity();
+}
+
+public List<Contact> sortByState() {
+    return service.sortContactsByState();
+}
+
+public List<Contact> sortByZip() {
+    return service.sortContactsByZip();
+}
 
 }

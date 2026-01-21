@@ -169,6 +169,23 @@ public class AddressBookMain {
         for (Contact contact : sortedContacts) {
             System.out.println(contact); // calls toString
         }
+        // -------- SORT BY CITY --------
+        System.out.println("\n--- Contacts Sorted By City ---");
+        for (Contact contact : controller.sortByCity()) {
+            System.out.println(contact);
+        }
+
+        // -------- SORT BY STATE --------
+        System.out.println("\n--- Contacts Sorted By State ---");
+        for (Contact contact : controller.sortByState()) {
+            System.out.println(contact);
+        }
+
+        // -------- SORT BY ZIP --------
+        System.out.println("\n--- Contacts Sorted By Zip ---");
+        for (Contact contact : controller.sortByZip()) {
+            System.out.println(contact);
+        }
 
         sc.close();
     }

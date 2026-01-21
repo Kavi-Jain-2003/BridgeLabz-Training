@@ -92,6 +92,17 @@ public Map<String, Integer> countContactsByState() {
 public List<Contact> sortContactsByName() {
     return repository.getSortedContacts();
 }
+public List<Contact> sortContactsByCity() {
+    return repository.sortByCity();
+}
+
+public List<Contact> sortContactsByState() {
+    return repository.sortByState();
+}
+
+public List<Contact> sortContactsByZip() {
+    return repository.sortByZip();
+}
 
 
 }
