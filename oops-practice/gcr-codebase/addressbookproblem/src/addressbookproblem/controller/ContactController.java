@@ -36,20 +36,26 @@ public class ContactController {
         return service.searchPerson(cityOrState);
 
     }
-public Map<String, List<Contact>> viewPersonsByCity() {
-    return service.viewPersonsByCity();
-}
 
-public Map<String, List<Contact>> viewPersonsByState() {
-    return service.viewPersonsByState();
-}
-//usecase10
-public Map<String, Integer> countByCity() {
-    return service.countContactsByCity();
-}
+    public Map<String, List<Contact>> viewPersonsByCity() {
+        return service.viewPersonsByCity();
+    }
 
-public Map<String, Integer> countByState() {
-    return service.countContactsByState();
-}
+    public Map<String, List<Contact>> viewPersonsByState() {
+        return service.viewPersonsByState();
+    }
+
+    // usecase10
+    public Map<String, Integer> countByCity() {
+        return service.countContactsByCity();
+    }
+
+    public Map<String, Integer> countByState() {
+        return service.countContactsByState();
+    }
+
+    public List<Contact> sortContactsByName() {
+        return service.sortContactsByName();
+    }
 
 }

@@ -88,10 +88,13 @@ public class Contact {
     }
 
     @Override
-    public String toString() {
-        return firstName + " " + lastName + ", " + city + ", " + state +
-                " | Phone: " + phoneNumber + " | Email: " + email;
-    }
+public String toString() {
+    return firstName + " " + lastName +
+           " | " + city + ", " + state +
+           " | Phone: " + phoneNumber +
+           " | Email: " + email;
+}
+
 
     @Override
     public boolean equals(Object obj) {

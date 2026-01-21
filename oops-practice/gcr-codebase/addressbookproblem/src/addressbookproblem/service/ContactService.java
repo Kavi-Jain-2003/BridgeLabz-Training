@@ -89,6 +89,9 @@ public class ContactService {
 public Map<String, Integer> countContactsByState() {
     return repository.countByState();
 }
+public List<Contact> sortContactsByName() {
+    return repository.getSortedContacts();
+}
 
 
 }

@@ -145,22 +145,30 @@ public class AddressBookMain {
                 System.out.println("  " + contact);
             }
         }
-        //usecase10
+        // usecase10
         System.out.println("\n--- Contact Count By City ---");
 
-Map<String, Integer> cityCount = controller.countByCity();
+        Map<String, Integer> cityCount = controller.countByCity();
 
-for (String city : cityCount.keySet()) {
-    System.out.println(city + " : " + cityCount.get(city));
-}
-System.out.println("\n--- Contact Count By State ---");
+        for (String city : cityCount.keySet()) {
+            System.out.println(city + " : " + cityCount.get(city));
+        }
+        System.out.println("\n--- Contact Count By State ---");
 
-Map<String, Integer> stateCount = controller.countByState();
+        Map<String, Integer> stateCount = controller.countByState();
 
-for (String state : stateCount.keySet()) {
-    System.out.println(state + " : " + stateCount.get(state));
-}
+        for (String state : stateCount.keySet()) {
+            System.out.println(state + " : " + stateCount.get(state));
+        }
 
+        // -------- SORT CONTACTS BY NAME --------
+        System.out.println("\n--- Contacts Sorted Alphabetically by Name ---");
+
+        List<Contact> sortedContacts = controller.sortContactsByName();
+
+        for (Contact contact : sortedContacts) {
+            System.out.println(contact); // calls toString
+        }
 
         sc.close();
     }

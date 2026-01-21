@@ -119,6 +119,16 @@ public class ContactRepository {
     }
     return stateCount;
 }
+public List<Contact> getSortedContacts() {
+
+    List<Contact> contacts = addressBook.getContacts();
+
+    Collections.sort(contacts); // uses compareTo()
+
+    return contacts;
+}
+
+
 
 
 }
