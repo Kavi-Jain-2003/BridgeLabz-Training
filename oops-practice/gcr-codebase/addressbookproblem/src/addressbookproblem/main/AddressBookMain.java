@@ -4,6 +4,7 @@ import addressbookproblem.controller.ContactController;
 import addressbookproblem.model.Contact;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class AddressBookMain {
@@ -120,6 +121,28 @@ public class AddressBookMain {
             System.out.println(" Contacts found in " + cityOrState + ":");
             for (Contact contact : foundContacts) {
                 System.out.println(contact);
+            }
+        }
+
+        System.out.println("\n--- Persons Grouped By City ---");
+
+        Map<String, List<Contact>> cityMap = controller.viewPersonsByCity();
+
+        for (String city : cityMap.keySet()) {
+            System.out.println("City: " + city);
+            for (Contact contact : cityMap.get(city)) {
+                System.out.println("  " + contact);
+            }
+        }
+
+        System.out.println("\n--- Persons Grouped By State ---");
+
+        Map<String, List<Contact>> stateMap = controller.viewPersonsByState();
+
+        for (String state : stateMap.keySet()) {
+            System.out.println("State: " + state);
+            for (Contact contact : stateMap.get(state)) {
+                System.out.println("  " + contact);
             }
         }
 

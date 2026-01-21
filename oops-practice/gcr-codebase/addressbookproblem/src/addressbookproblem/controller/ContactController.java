@@ -1,6 +1,10 @@
 package addressbookproblem.controller;
 
 import addressbookproblem.model.Contact;
+
+import java.util.List;
+import java.util.Map;
+
 import addressbookproblem.model.AddressBook;
 import addressbookproblem.service.ContactService;
 
@@ -27,5 +31,17 @@ public class ContactController {
     public boolean addContact(Contact contact) {
         return service.addNewContact(contact);
     }
+
+    public List<Contact> searchPerson(String cityOrState) {
+        return service.searchPerson(cityOrState);
+
+    }
+public Map<String, List<Contact>> viewPersonsByCity() {
+    return service.viewPersonsByCity();
+}
+
+public Map<String, List<Contact>> viewPersonsByState() {
+    return service.viewPersonsByState();
+}
 
 }

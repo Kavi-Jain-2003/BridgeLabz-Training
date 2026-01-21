@@ -1,7 +1,6 @@
 package addressbookproblem.repository;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import addressbookproblem.model.AddressBook;
 import addressbookproblem.model.Contact;
@@ -54,18 +53,46 @@ public class ContactRepository {
         return false; // no duplicate
     }
 
-    
     public List<Contact> searchByCityOrState(String cityOrState) {
-    List<Contact> result = new ArrayList<>();
+        List<Contact> result = new ArrayList<>();
 
-    for (Contact contact : addressBook.getContacts()) {
-        if (contact.getCity().equalsIgnoreCase(cityOrState) ||
-            contact.getState().equalsIgnoreCase(cityOrState)) {
-            result.add(contact);
+        for (Contact contact : addressBook.getContacts()) {
+            if (contact.getCity().equalsIgnoreCase(cityOrState) ||
+                    contact.getState().equalsIgnoreCase(cityOrState)) {
+                result.add(contact);
+            }
         }
+
+        return result;
     }
 
-    return result;
+public Map<String, List<Contact>> getPersonsByCity() {
+
+    Map<String, List<Contact>> cityMap = new HashMap<>();
+
+    for (Contact contact : addressBook.getContacts()) {
+        String city = contact.getCity();
+
+        // If city not present, create empty list
+        cityMap.putIfAbsent(city, new ArrayList<>());
+
+        // Add contact to city list
+        cityMap.get(city).add(contact);
+    }
+    return cityMap;
+}
+
+public Map<String, List<Contact>> getPersonsByState() {
+
+    Map<String, List<Contact>> stateMap = new HashMap<>();
+
+    for (Contact contact : addressBook.getContacts()) {
+        String state = contact.getState();
+
+        stateMap.putIfAbsent(state, new ArrayList<>());
+        stateMap.get(state).add(contact);
+    }
+    return stateMap;
 }
 
 }
