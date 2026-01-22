@@ -1,6 +1,6 @@
 package addressbookproblem.model;
 
-public class Contact {
+public class Contact implements Comparable<Contact> {
     private String firstName;
     private String lastName;
     private String address;
@@ -20,7 +20,8 @@ public class Contact {
         this.zip = zip;
         this.phoneNumber = phoneNumber;
         this.email = email;
-    } // Getters
+    }
+    // Getters
 
     public String getFirstName() {
         return firstName;
@@ -54,7 +55,7 @@ public class Contact {
         return email;
     }
 
-    // Setters (REQUIRED for editing)
+    // Setters
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -88,14 +89,14 @@ public class Contact {
     }
 
     @Override
-public String toString() {
-    return firstName + " " + lastName +
-           " | " + city + ", " + state +
-           " | Phone: " + phoneNumber +
-           " | Email: " + email;
-}
+    public String toString() {
+        return firstName + " " + lastName +
+                " | " + city + ", " + state +
+                " | PhoneNumber: " + phoneNumber +
+                " | EmailAddress: " + email;
+    }
 
-
+    // usecase7
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -113,6 +114,13 @@ public String toString() {
     @Override
     public int hashCode() {
         return (firstName + lastName).toLowerCase().hashCode();
+    }
+
+    // usecase11
+    @Override
+    public int compareTo(Contact other) {
+        // Sort by first name alphabetically
+        return this.firstName.compareToIgnoreCase(other.firstName);
     }
 
 }

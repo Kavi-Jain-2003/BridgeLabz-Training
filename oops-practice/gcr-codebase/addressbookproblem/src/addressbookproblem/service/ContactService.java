@@ -10,7 +10,7 @@ import addressbookproblem.repository.ContactRepository;
 public class ContactService {
 
     private ContactRepository repository = new ContactRepository();
-
+//usecase1,2
     public boolean addNewContact(Contact contact) {
         // Check for duplicate first
         if (repository.isDuplicate(contact)) {
@@ -42,7 +42,7 @@ public class ContactService {
             System.out.println(contact);
         }
     }
-
+//usecas3
     public boolean editContact(String name, Contact updatedContact) {
 
         // Step 1: Find existing contact using name
@@ -65,15 +65,15 @@ public class ContactService {
         // Step 4: Return success
         return true;
     }
-
+//usecase4
     public boolean deleteContact(String firstName) {
         return repository.deleteContactByFirstName(firstName);
     }
-
+//usecase8
     public List<Contact> searchPerson(String cityOrState) {
         return repository.searchByCityOrState(cityOrState);
     }
-
+//usecase9
     public Map<String, List<Contact>> viewPersonsByCity() {
         return repository.getPersonsByCity();
     }
@@ -81,7 +81,7 @@ public class ContactService {
     public Map<String, List<Contact>> viewPersonsByState() {
         return repository.getPersonsByState();
     }
-    //usecase10
+//usecase10
     public Map<String, Integer> countContactsByCity() {
     return repository.countByCity();
 }
@@ -89,9 +89,11 @@ public class ContactService {
 public Map<String, Integer> countContactsByState() {
     return repository.countByState();
 }
+//usecase11
 public List<Contact> sortContactsByName() {
     return repository.getSortedContacts();
 }
+//usecase12
 public List<Contact> sortContactsByCity() {
     return repository.sortByCity();
 }

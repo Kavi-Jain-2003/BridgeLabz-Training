@@ -10,15 +10,15 @@ import java.util.Scanner;
 public class AddressBookMain {
 
     public static void main(String[] args) {
-
-        System.out.println("Welcome to Address Book");
+        // welcome message
+        System.out.println("Welcome!!! to Address Book");
 
         Scanner sc = new Scanner(System.in);
         ContactController controller = new ContactController();
 
         String choice;
-
-        // -------- ADD MULTIPLE CONTACTS --------
+        // usecase1,2
+        // ADD MULTIPLE CONTACTS
         do {
             System.out.println("\nEnter Contact Details");
 
@@ -63,11 +63,11 @@ public class AddressBookMain {
 
         } while (choice.equalsIgnoreCase("yes"));
 
-        // -------- DISPLAY CONTACTS --------
+        // DISPLAY CONTACTS
         System.out.println("\n--- Address Book Contacts ---");
         controller.displayContacts();
-
-        // -------- EDIT CONTACT --------
+        // usecase3
+        // EDIT CONTACT
         System.out.print("\nEnter First Name to Edit: ");
         String nameToEdit = sc.nextLine();
 
@@ -100,16 +100,16 @@ public class AddressBookMain {
 
         boolean updated = controller.editContact(nameToEdit, updatedContact);
         System.out.println(updated ? " Contact Updated" : " Contact Not Found");
-
-        // -------- DELETE CONTACT --------
+        // usecase4
+        // DELETE CONTACT
         System.out.print("\nEnter First Name to Delete: ");
         String nameToDelete = sc.nextLine();
 
         boolean deleted = controller.deleteContact(nameToDelete);
 
         System.out.println(deleted ? " Contact Deleted" : " Contact Not Found");
-
-        // -------- SEARCH PERSON BY CITY OR STATE --------
+        // usecase9
+        // SEARCH PERSON BY CITY OR STATE
         System.out.print("\nEnter City or State to search for persons: ");
         String cityOrState = sc.nextLine();
 
@@ -160,8 +160,8 @@ public class AddressBookMain {
         for (String state : stateCount.keySet()) {
             System.out.println(state + " : " + stateCount.get(state));
         }
-
-        // -------- SORT CONTACTS BY NAME --------
+        // usecase11
+        // SORT CONTACTS BY NAME
         System.out.println("\n--- Contacts Sorted Alphabetically by Name ---");
 
         List<Contact> sortedContacts = controller.sortContactsByName();
@@ -169,19 +169,20 @@ public class AddressBookMain {
         for (Contact contact : sortedContacts) {
             System.out.println(contact); // calls toString
         }
-        // -------- SORT BY CITY --------
+        // usecase12
+        // SORT BY CITY
         System.out.println("\n--- Contacts Sorted By City ---");
         for (Contact contact : controller.sortByCity()) {
             System.out.println(contact);
         }
 
-        // -------- SORT BY STATE --------
+        // SORT BY STATE
         System.out.println("\n--- Contacts Sorted By State ---");
         for (Contact contact : controller.sortByState()) {
             System.out.println(contact);
         }
 
-        // -------- SORT BY ZIP --------
+        // SORT BY ZIP
         System.out.println("\n--- Contacts Sorted By Zip ---");
         for (Contact contact : controller.sortByZip()) {
             System.out.println(contact);

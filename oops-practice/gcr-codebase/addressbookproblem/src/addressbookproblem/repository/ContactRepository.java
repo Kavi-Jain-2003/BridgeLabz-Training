@@ -9,6 +9,7 @@ public class ContactRepository {
 
     private AddressBook addressBook = new AddressBook();
 
+    // usecase1,2
     public void addContact(Contact contact) {
         addressBook.addContact(contact);
     }
@@ -17,6 +18,7 @@ public class ContactRepository {
         return addressBook;
     }
 
+    // usecase3
     public Contact findByFirstName(String firstName) {
         for (Contact c : addressBook.getContacts()) {
             if (c.getFirstName().equalsIgnoreCase(firstName)) {
@@ -26,6 +28,7 @@ public class ContactRepository {
         return null;
     }
 
+    // usecase4
     public boolean deleteContactByFirstName(String firstName) {
 
         // Get all contacts
@@ -44,6 +47,7 @@ public class ContactRepository {
         return false;
     }
 
+    // usecase7
     public boolean isDuplicate(Contact contact) {
         for (Contact c : addressBook.getContacts()) {
             if (c.equals(contact)) { // uses overridden equals()
@@ -53,6 +57,7 @@ public class ContactRepository {
         return false; // no duplicate
     }
 
+    // usecase8
     public List<Contact> searchByCityOrState(String cityOrState) {
         List<Contact> result = new ArrayList<>();
 
@@ -66,6 +71,7 @@ public class ContactRepository {
         return result;
     }
 
+    // usecase9
     public Map<String, List<Contact>> getPersonsByCity() {
 
         Map<String, List<Contact>> cityMap = new HashMap<>();
@@ -82,6 +88,7 @@ public class ContactRepository {
         return cityMap;
     }
 
+    // usecase9
     public Map<String, List<Contact>> getPersonsByState() {
 
         Map<String, List<Contact>> stateMap = new HashMap<>();
@@ -94,7 +101,8 @@ public class ContactRepository {
         }
         return stateMap;
     }
-//usecase10
+
+    // usecase10
     public Map<String, Integer> countByCity() {
 
         Map<String, Integer> cityCount = new HashMap<>();
@@ -110,52 +118,54 @@ public class ContactRepository {
 
     public Map<String, Integer> countByState() {
 
-    Map<String, Integer> stateCount = new HashMap<>();
+        Map<String, Integer> stateCount = new HashMap<>();
 
-    for (Contact contact : addressBook.getContacts()) {
-        String state = contact.getState();
+        for (Contact contact : addressBook.getContacts()) {
+            String state = contact.getState();
 
-        stateCount.put(state, stateCount.getOrDefault(state, 0) + 1);
+            stateCount.put(state, stateCount.getOrDefault(state, 0) + 1);
+        }
+        return stateCount;
     }
-    return stateCount;
-}
-public List<Contact> getSortedContacts() {
 
-    List<Contact> contacts = addressBook.getContacts();
+    // usecase11
+    public List<Contact> getSortedContacts() {
 
-    Collections.sort(contacts); // uses compareTo()
+        List<Contact> contacts = addressBook.getContacts();
 
-    return contacts;
-}
-public List<Contact> sortByCity() {
+        Collections.sort(contacts); // uses compareTo()
 
-    List<Contact> contacts = addressBook.getContacts();
+        return contacts;
+    }
 
-    Collections.sort(contacts, Comparator.comparing(
-            Contact::getCity, String.CASE_INSENSITIVE_ORDER));
+    // usecase12
+    public List<Contact> sortByCity() {
 
-    return contacts;
-}
+        List<Contact> contacts = addressBook.getContacts();
 
-public List<Contact> sortByState() {
+        Collections.sort(contacts, Comparator.comparing(
+                Contact::getCity, String.CASE_INSENSITIVE_ORDER));
 
-    List<Contact> contacts = addressBook.getContacts();
+        return contacts;
+    }
 
-    Collections.sort(contacts, Comparator.comparing(
-            Contact::getState, String.CASE_INSENSITIVE_ORDER));
+    public List<Contact> sortByState() {
 
-    return contacts;
-}
+        List<Contact> contacts = addressBook.getContacts();
 
-public List<Contact> sortByZip() {
+        Collections.sort(contacts, Comparator.comparing(
+                Contact::getState, String.CASE_INSENSITIVE_ORDER));
 
-    List<Contact> contacts = addressBook.getContacts();
+        return contacts;
+    }
 
-    Collections.sort(contacts, Comparator.comparing(Contact::getZip));
+    public List<Contact> sortByZip() {
 
-    return contacts;
-}
+        List<Contact> contacts = addressBook.getContacts();
 
+        Collections.sort(contacts, Comparator.comparing(Contact::getZip));
 
+        return contacts;
+    }
 
 }
