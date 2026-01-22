@@ -76,6 +76,16 @@ It serves as a structured record of assignments, hands-on labs, and continuous t
 <li>Digital Wallet System</li>
 </ol>
 
+<h3>DSA-practice Scenerio-based</h3>
+<ol>
+  <li>TrafficManager-RoundAbout Vehicle Flow Story</li>
+  <li>BookShelf- Library Organiz Story</li>
+  <li>BrowserBuddy-Tab History Manager</li>
+  <li>ParcelTracker- Delivery Chain Management</li>
+  <li>ExamProctor- Online Exam review System</li>
+  <li>CinemaTime- Movie Schedule Manager</li>
+</ol>
+
 -----------------------------------------------------------------------------------
 <h2>Weekly Learning Progress Report</h2>
 
@@ -190,7 +200,10 @@ Completed someusecse of addressbookproblem
 Oops-practice Review. Studied the Algorithm's runtime analysis and Big-O Notation.
 
 20-Jan-2026(Tuesday):
-Submitted Algorithm's runtime analysis and Big-O Notation.
+Submitted Algorithm's runtime analysis and Big-O Notation. Stuied and submitted scenerio-based of dsa-practice.
+
+21-Jan-2026(Wednesday);
+Studied Generics in java and submitted its problems.
 
 
 
