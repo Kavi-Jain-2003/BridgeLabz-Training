@@ -205,6 +205,8 @@ Submitted Algorithm's runtime analysis and Big-O Notation. Stuied and submitted 
 21-Jan-2026(Wednesday);
 Studied Generics in java and submitted its problems.
 
+------------------------------------------------------------------------------------------------------------
+
 <h3>Week 5: Collections Practice</h3>
 
 22-Jan-2026(Thursday):
