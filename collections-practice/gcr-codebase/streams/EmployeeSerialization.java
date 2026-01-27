@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.io.Serializable;
 
 // Employee class
 class Employee implements Serializable {
@@ -22,14 +23,13 @@ public class EmployeeSerialization {
 
     public static void main(String[] args) {
 
-        // Create employee list
         ArrayList<Employee> empList = new ArrayList<>();
 
         empList.add(new Employee(1, "Amit", "IT", 50000));
         empList.add(new Employee(2, "Neha", "HR", 45000));
         empList.add(new Employee(3, "Rahul", "Finance", 55000));
 
-        // -------- Serialization --------
+        // Serialization
         try {
             ObjectOutputStream oos =
                     new ObjectOutputStream(new FileOutputStream("employees.dat"));
@@ -43,7 +43,7 @@ public class EmployeeSerialization {
             System.out.println("Error while saving employees.");
         }
 
-        // -------- Deserialization --------
+        // Deserialization
         try {
             ObjectInputStream ois =
                     new ObjectInputStream(new FileInputStream("employees.dat"));

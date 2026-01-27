@@ -10,7 +10,7 @@ public class DataStream {
                     new DataOutputStream(new FileOutputStream("student.dat"));
 
             dos.writeInt(101);                 // Roll number
-            dos.writeUTF("Kavi Jain");         // Name
+            dos.writeUTF("pooja");         // Name
             dos.writeDouble(8.5);              // GPA
 
             dos.close();
