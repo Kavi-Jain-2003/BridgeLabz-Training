@@ -218,6 +218,8 @@ Submitted collections(list,map,set,queue) problems.
 26-Jan-2026(Monday):
 Studied and submitted java streams.
 
+27-Jan-2026(Tuesday):
+Studied Exceptions concept and submitted its assignment. Completed lexical twist problem too.
 
 
 
