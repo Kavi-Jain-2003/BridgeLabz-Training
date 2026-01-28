@@ -221,6 +221,9 @@ Studied and submitted java streams.
 27-Jan-2026(Tuesday):
 Studied Exceptions concept and submitted its assignment. Completed lexical twist problem too.
 
+28-Jan-2026(Wednesday);
+Studied the flip key logical probelm and submitted it. Submitted collections scenerio-based problems.
+
 
 
 
