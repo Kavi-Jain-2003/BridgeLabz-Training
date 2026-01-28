@@ -14,7 +14,7 @@ public class FlipKeyLogical {
 
 			System.out.println("Invalid Input");
 		}
-
+		sc.close();
 	}
 
 	public static String CleanseAndInvert(String word) {
@@ -50,33 +50,31 @@ public class FlipKeyLogical {
 
 	// converting to lowercase
 	public static String convertingToLowerCase(String str) {
-		String lowerStr = "";
+		StringBuilder lowerStr =new StringBuilder();
 		for (int i = 0; i < str.length(); i++) {
 			char ch = str.charAt(i);
 			if (ch >= 'A' && ch <= 'Z') {
-				lowerStr += ((char) (ch + 32));
+				lowerStr.append((char) (ch + 32));
 			} else {
-				lowerStr += ch;
+				lowerStr.append(ch);
 			}
 		}
-		return lowerStr;
+		return lowerStr.toString();
 	}
 
 	// converting to uppercase
 	public static String convertingToUpperCase(String str) {
-		String upperStr = "";
+		StringBuilder upperStr = new StringBuilder();
 		for (int i = 0; i < str.length(); i++) {
 			char ch = str.charAt(i);
-			if (i % 2 == 0) {				
-				if (ch >= 'a' && ch <= 'z') {
-					upperStr += ((char) (ch - 32));
+			if ((i % 2 == 0) && (ch >= 'a' && ch <= 'z') ){
+					upperStr.append((char) (ch - 32));
 				}
-			}
 			 else {
-					upperStr += ch;
+					upperStr.append(ch);
 				}
 		}
-		return upperStr;
+		return upperStr.toString();
 	}
 
 	// reversing the character
