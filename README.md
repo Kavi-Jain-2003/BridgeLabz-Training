@@ -86,6 +86,16 @@ It serves as a structured record of assignments, hands-on labs, and continuous t
   <li>CinemaTime- Movie Schedule Manager</li>
 </ol>
 
+<h3>Collections Scenerio-based</h3>
+<ol>
+  <li>Education result-MarkSheet</li>
+  <li>File Backup</li>
+  <li>BrowserBuddy-Tab History Manager</li>
+  <li>ParcelTracker- Delivery Chain Management</li>
+  <li>Restaurant Table Reservation/li>
+  <li>Smart Checkout-Supermarket Billing</li>
+</ol>
+
 -----------------------------------------------------------------------------------
 <h2>Weekly Learning Progress Report</h2>
 
