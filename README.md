@@ -224,6 +224,14 @@ Studied Exceptions concept and submitted its assignment. Completed lexical twist
 28-Jan-2026(Wednesday);
 Studied the flip key logical probelm and submitted it. Submitted collections scenerio-based problems.
 
+29-Jan-2026(Thursday):
+
+30-Jan-2026(Friday):
+Studied regex and submitted regex problems.
+
+31-Jan-2026(Saturday):
+Studeied Junit and submitted Junit probelms.
+
 
 
 
