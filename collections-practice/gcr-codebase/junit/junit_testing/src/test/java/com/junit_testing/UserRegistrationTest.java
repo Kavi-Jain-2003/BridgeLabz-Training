@@ -10,13 +10,13 @@ class UserRegistrationTest {
 
     @Test
     void testValidUserRegistration() {
-        registration.registerUser("kavi", "kavi@gmail.com", "secret1");
+        registration.registerUser("pooja", "pooja@gmail.com", "secret1");
     }
 
     @Test
     void testInvalidUsername() {
         try {
-            registration.registerUser("", "kavi@gmail.com", "secret1");
+            registration.registerUser("", "pooja@gmail.com", "secret1");
             fail("Exception not thrown");
         } catch (IllegalArgumentException e) {
             // Exception expected
