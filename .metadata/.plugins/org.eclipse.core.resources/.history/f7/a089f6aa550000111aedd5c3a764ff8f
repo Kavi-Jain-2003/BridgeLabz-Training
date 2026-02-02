@@ -1,0 +1,18 @@
+
+public class DeprecatedDemo {
+	@Deprecated
+	public void oldFeature()
+	{
+		System.out.println("old method");
+	}
+	public void newFeature()
+	{
+		System.out.println("new method");
+	}
+	public static void main(String[] args)
+	{
+		DeprecatedDemo l=new DeprecatedDemo();
+		l.oldFeature();
+		l.newFeature();
+	}
+}

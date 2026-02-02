@@ -1,0 +1,27 @@
+public class FlightUtil extends FlightDetails
+{
+	FlightUtil(String flightNumber, String flightName, int passengerCount, int currentFuelLevel)
+	{
+		super(flightNumber,flightName,passengerCount,currentFuelLevel);
+	}
+	public boolean validateFlightNumber(String flightNumber) throws InvalidFlightException
+	{
+		if(!flightNumber.matches("FL[1-9][0-9]{3}"))
+		{
+			throw new InvalidFlightException("the fligt number "+flightNumber+" is invalid");
+		}
+		return true;
+	}
+	public boolean validateFlightName(String flightName) throws InvalidFlightException
+	{
+		if(!flightName.matches("\\b(SpiceJet|Vistara|IndiGo|Air Arabia)\\b"))
+		{
+			throw new InvalidFlightException("the fligt name "+flightName+" is invalid");
+		}
+		return true;
+	}
+	public boolean validatePassangerCount(int passengerCount,String flightName) throws InvalidFlightException
+	{
+		return true;
+	}
+}

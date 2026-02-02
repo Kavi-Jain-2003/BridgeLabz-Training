@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;FutureLogistics.java&apos; to &apos;UserInterface.java&apos;&#x0D;&#x0A;- Original project: &apos;futureLogistics&apos;&#x0D;&#x0A;- Original element: &apos;FutureLogistics.java&apos;&#x0D;&#x0A;- Renamed element: &apos;UserInterface.java&apos;" description="Rename compilation unit &apos;FutureLogistics.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/&lt;{FutureLogistics.java" name="UserInterface.java" references="false" stamp="1769967928319" version="1.0"/>
+</session>
