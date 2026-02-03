@@ -234,13 +234,21 @@ Studied Exceptions concept and submitted its assignment. Completed lexical twist
 28-Jan-2026(Wednesday);
 Studied the flip key logical probelm and submitted it. Submitted collections scenerio-based problems.
 
-29-Jan-2026(Thursday):
-
 30-Jan-2026(Friday):
 Studied regex and submitted regex problems.
 
-31-Jan-2026(Saturday):
-Studeied Junit and submitted Junit probelms.
+1-Feb-2026(Sunday):
+Completed AeroVigil dsa scenerio-based problem. Studied Junit and submitted Junit probelms.
+
+2-Feb-2026(Tuesday):
+Studied and submitted annotations and reflection problems.
+
+------------------------------------------------------------------------------------------------------------
+
+<h3>Week 6:IO Programming Practice </h3>
+
+3-Feb-2026(Wdnesday):
+Studeied and submitted csv handling problems.
 
 
 
