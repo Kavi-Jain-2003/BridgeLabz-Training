@@ -1,1 +1,11 @@
 *.class
+.metadata
+
+/# Eclipse
+.classpath
+.project
+.settings/
+
+# Compiled files
+bin/
+target/
