@@ -1,5 +1,0 @@
-
-public class ConcatenateStringsUsingStringBuffer {
-	//string buffer object
-	StringBuffer sb=new StringBuffer();
-}
