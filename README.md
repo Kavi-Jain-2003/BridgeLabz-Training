@@ -240,15 +240,34 @@ Studied regex and submitted regex problems.
 1-Feb-2026(Sunday):
 Completed AeroVigil dsa scenerio-based problem. Studied Junit and submitted Junit probelms.
 
-2-Feb-2026(Tuesday):
+2-Feb-2026(Monday):
 Studied and submitted annotations and reflection problems.
 
 ------------------------------------------------------------------------------------------------------------
 
 <h3>Week 6:IO Programming Practice </h3>
 
-3-Feb-2026(Wdnesday):
+3-Feb-2026(Tuesday):
 Studeied and submitted csv handling problems.
+
+4-Feb-2026(Wednesday):
+Studied and submitted json handling problems.
+
+------------------------------------------------------------------------------------------------------------
+
+<h3>Week 7: Java 8 & its features </h3>
+
+4-Feb-2026(Wednesday):
+Studied and submitted lambda expression .
+
+5-Feb-2026(Thursday):
+Studied functional interface.
+
+6-Feb-2026(Friday):
+Studied StreamAPI and collectors.
+
+7-Feb-20026(Saturday):
+Submitted functional interface, streamAPI, collectors.
 
 
 
