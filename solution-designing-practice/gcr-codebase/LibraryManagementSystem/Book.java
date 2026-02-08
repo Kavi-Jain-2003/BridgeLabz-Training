@@ -4,7 +4,6 @@ public class Book {
     String author;
     String edition;
 
-    // Constructor must be PUBLIC
     public Book(BookBuilder builder) {
         this.title = builder.title;
         this.author = builder.author;
