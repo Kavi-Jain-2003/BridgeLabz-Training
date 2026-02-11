@@ -269,6 +269,8 @@ Studied StreamAPI and collectors.
 7-Feb-20026(Saturday):
 Submitted functional interface, streamAPI, collectors.
 
+8-Feb-20026(Sunday):
+Studied and submitted design pattern problems. Studied and submitted multi threading problems.
 
 
 
