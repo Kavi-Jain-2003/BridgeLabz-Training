@@ -272,6 +272,9 @@ Submitted functional interface, streamAPI, collectors.
 8-Feb-20026(Sunday):
 Studied and submitted design pattern problems. Studied and submitted multi threading problems.
 
+9-Feb-2026(Monday):
+Implemented sonarQube on address book problem.
+
 
 
 --------------------------------------------------------------------------------------------------------------
