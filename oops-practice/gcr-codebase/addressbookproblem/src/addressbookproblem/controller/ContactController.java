@@ -7,67 +7,99 @@ import java.util.Map;
 
 import addressbookproblem.model.AddressBook;
 import addressbookproblem.service.ContactService;
+import addressbookproblem.repository.ContactRepository;
 
 public class ContactController {
 
-    private ContactService service = new ContactService();
+	private ContactService service = new ContactService();
+
 //usecase1, 2
-    public AddressBook getAddressBook() {
-        return service.getAddressBook();
-    }
+	public AddressBook getAddressBook() {
+		return service.getAddressBook();
+	}
 
-    public void displayContacts() {
-        service.displayContacts();
-    }
+	public void displayContacts() {
+		service.displayContacts();
+	}
+
 //usecase3
-    public boolean editContact(String name, Contact updatedContact) {
-        return service.editContact(name, updatedContact);
-    }
+	public boolean editContact(String name, Contact updatedContact) {
+		return service.editContact(name, updatedContact);
+	}
+
 //usecase4
-    public boolean deleteContact(String firstName) {
-        return service.deleteContact(firstName);
-    }
+	public boolean deleteContact(String firstName) {
+		return service.deleteContact(firstName);
+	}
+
 //usecase5
-    public boolean addContact(Contact contact) {
-        return service.addNewContact(contact);
-    }
+	public boolean addContact(Contact contact) {
+		return service.addNewContact(contact);
+	}
+
 //usecase8
-    public List<Contact> searchPerson(String cityOrState) {
-        return service.searchPerson(cityOrState);
+	public List<Contact> searchPerson(String cityOrState) {
+		return service.searchPerson(cityOrState);
 
-    }
+	}
+
 //usecase9
-    public Map<String, List<Contact>> viewPersonsByCity() {
-        return service.viewPersonsByCity();
-    }
+	public Map<String, List<Contact>> viewPersonsByCity() {
+		return service.viewPersonsByCity();
+	}
 
-    public Map<String, List<Contact>> viewPersonsByState() {
-        return service.viewPersonsByState();
-    }
+	public Map<String, List<Contact>> viewPersonsByState() {
+		return service.viewPersonsByState();
+	}
 
 // usecase10
-    public Map<String, Integer> countByCity() {
-        return service.countContactsByCity();
-    }
+	public Map<String, Integer> countByCity() {
+		return service.countContactsByCity();
+	}
 
-    public Map<String, Integer> countByState() {
-        return service.countContactsByState();
-    }
+	public Map<String, Integer> countByState() {
+		return service.countContactsByState();
+	}
+
 //usecase11
-    public List<Contact> sortContactsByName() {
-        return service.sortContactsByName();
-    }
-    //usecase12
-public List<Contact> sortByCity() {
-    return service.sortContactsByCity();
-}
+	public List<Contact> sortContactsByName() {
+		return service.sortContactsByName();
+	}
 
-public List<Contact> sortByState() {
-    return service.sortContactsByState();
-}
+	// usecase12
+	public List<Contact> sortByCity() {
+		return service.sortContactsByCity();
+	}
 
-public List<Contact> sortByZip() {
-    return service.sortContactsByZip();
-}
+	public List<Contact> sortByState() {
+		return service.sortContactsByState();
+	}
+
+	public List<Contact> sortByZip() {
+		return service.sortContactsByZip();
+	}
+
+//usecase 13
+	private ContactRepository repository;
+
+	public ContactController() {
+		repository = new ContactRepository();
+	}
+
+	public void saveToFile(String fileName) {
+		repository.writeToFile(fileName);
+	}
+
+	public void loadFromFile(String fileName) {
+		repository.readFromFile(fileName);
+	}
+//usecase14
+	public void saveToCSV(String fileName) {
+	    repository.writeToCSV(fileName);
+	}
+
+	public void loadFromCSV(String fileName) {
+	    repository.readFromCSV(fileName);
+	}
 
 }

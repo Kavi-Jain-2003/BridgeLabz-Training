@@ -2,8 +2,15 @@ package addressbookproblem.repository;
 
 import java.util.*;
 
+import java.io.FileWriter;
+import java.io.FileReader;
+import java.io.IOException;
 import addressbookproblem.model.AddressBook;
 import addressbookproblem.model.Contact;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 
 public class ContactRepository {
 
@@ -167,5 +174,109 @@ public class ContactRepository {
 
         return contacts;
     }
+    //usecase13
+    public void writeToFile(String fileName) {
 
-}
+        try {
+            FileWriter writer = new FileWriter(fileName);
+
+            for (Contact contact : addressBook.getContacts()) {
+                writer.write(contact.toString());
+                writer.write("\n");
+            }
+
+            writer.close();
+            System.out.println("Contacts saved successfully to file.");
+
+        } catch (IOException e) {
+            System.out.println("Error while writing to file.");
+            e.printStackTrace();
+        }
+    }
+    //usecase13
+    public void readFromFile(String fileName) {
+
+        try {
+            File file = new File(fileName);
+            Scanner sc = new Scanner(file);
+
+            System.out.println("Reading contacts from file:\n");
+
+            while (sc.hasNextLine()) {
+                String line = sc.nextLine();
+                System.out.println(line);
+            }
+
+            sc.close();
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found.");
+            e.printStackTrace();
+        }
+    }
+    //usecase14
+    public void writeToCSV(String fileName) {
+
+        try {
+            FileWriter writer = new FileWriter(fileName);
+
+            for (Contact contact : addressBook.getContacts()) {
+
+                writer.write(
+                    contact.getFirstName() + "," +
+                    contact.getLastName() + "," +
+                    contact.getAddress() + "," +
+                    contact.getCity() + "," +
+                    contact.getState() + "," +
+                    contact.getZip() + "," +
+                    contact.getPhoneNumber() + "," +
+                    contact.getEmail()
+                );
+
+                writer.write("\n");
+            }
+
+            writer.close();
+            System.out.println("Contacts saved successfully in CSV file.");
+
+        } catch (IOException e) {
+            System.out.println("Error writing CSV file.");
+            e.printStackTrace();
+        }
+    }
+    public void readFromCSV(String fileName) {
+
+        try {
+            File file = new File(fileName);
+            Scanner sc = new Scanner(file);
+
+            while (sc.hasNextLine()) {
+
+                String line = sc.nextLine();
+
+                String[] data = line.split(",");
+
+                Contact contact = new Contact(
+                    data[0],  // firstName
+                    data[1],  // lastName
+                    data[2],  // address
+                    data[3],  // city
+                    data[4],  // state
+                    data[5],  // zip
+                    data[6],  // phone
+                    data[7]   // email
+                );
+
+                addressBook.getContacts().add(contact);
+            }
+
+            sc.close();
+            System.out.println("Contacts loaded from CSV successfully.");
+
+        } catch (FileNotFoundException e) {
+            System.out.println("CSV file not found.");
+            e.printStackTrace();
+        }
+    }
+  
+    }

@@ -1,6 +1,7 @@
 package addressbookproblem.main;
 
 import addressbookproblem.controller.ContactController;
+
 import addressbookproblem.model.Contact;
 
 import java.util.List;
@@ -187,6 +188,28 @@ public class AddressBookMain {
         for (Contact contact : controller.sortByZip()) {
             System.out.println(contact);
         }
+        //usecase13
+        System.out.print("Enter file name to save (example: contacts.txt): ");
+        String fileName = sc.nextLine();
+
+        controller.saveToFile(fileName);
+
+        System.out.print("Enter file name to read: ");
+        String readFile = sc.nextLine();
+
+        controller.loadFromFile(readFile);
+        //usecase14
+        System.out.print("Enter CSV file name (example: contacts.csv): ");
+        String csvfileName = sc.nextLine();
+
+        controller.saveToCSV(csvfileName);
+
+        System.out.print("Enter CSV file to read: ");
+        String csvreadFile = sc.nextLine();
+
+        controller.loadFromCSV(csvreadFile);
+       
+
 
         sc.close();
     }
