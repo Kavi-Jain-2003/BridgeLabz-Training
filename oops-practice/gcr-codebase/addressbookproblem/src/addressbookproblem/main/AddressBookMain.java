@@ -198,19 +198,13 @@ public class AddressBookMain {
         String readFile = sc.nextLine();
 
         controller.loadFromFile(readFile);
-        //usecase14
-        System.out.print("Enter CSV file name (example: contacts.csv): ");
-        String csvfileName = sc.nextLine();
+        //usecase14 17
+        controller.saveToCSVAsync("contacts.csv");
 
-        controller.saveToCSV(csvfileName);
+        System.out.println("Main thread is free to continue...");       
 
-        System.out.print("Enter CSV file to read: ");
-        String csvreadFile = sc.nextLine();
-
-        controller.loadFromCSV(csvreadFile);
-       
-
-
+        //usecase18
+        controller.saveToDatabase();
         sc.close();
     }
 }

@@ -2,6 +2,7 @@ package addressbookproblem.repository;
 
 import java.util.*;
 
+
 import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.IOException;
@@ -14,7 +15,12 @@ import java.util.Scanner;
 
 public class ContactRepository {
 
-    private AddressBook addressBook = new AddressBook();
+	private AddressBook addressBook;
+
+	public ContactRepository(AddressBook addressBook) {
+	    this.addressBook = addressBook;
+	}
+
 
     // usecase1,2
     public void addContact(Contact contact) {
@@ -214,69 +220,75 @@ public class ContactRepository {
             e.printStackTrace();
         }
     }
-    //usecase14
-    public void writeToCSV(String fileName) {
+    //usecase14 and 17
+    public void writeToCSVAsync(String fileName) {
 
-        try {
-            FileWriter writer = new FileWriter(fileName);
+        Thread thread = new Thread(() -> {
 
-            for (Contact contact : addressBook.getContacts()) {
+            try {
+                FileWriter writer = new FileWriter(fileName);
 
-                writer.write(
-                    contact.getFirstName() + "," +
-                    contact.getLastName() + "," +
-                    contact.getAddress() + "," +
-                    contact.getCity() + "," +
-                    contact.getState() + "," +
-                    contact.getZip() + "," +
-                    contact.getPhoneNumber() + "," +
-                    contact.getEmail()
-                );
+                writer.write("FirstName,LastName,Address,City,State,Zip,Phone,Email\n");
 
-                writer.write("\n");
+                for (Contact contact : addressBook.getContacts()) {
+
+                    writer.write(contact.getFirstName() + "," +
+                                 contact.getLastName() + "," +
+                                 contact.getAddress() + "," +
+                                 contact.getCity() + "," +
+                                 contact.getState() + "," +
+                                 contact.getZip() + "," +
+                                 contact.getPhoneNumber() + "," +
+                                 contact.getEmail() + "\n");
+                }
+
+                writer.close();
+                System.out.println("CSV Writing Completed (Background Thread)");
+
+            } catch (Exception e) {
+                e.printStackTrace();
             }
 
-            writer.close();
-            System.out.println("Contacts saved successfully in CSV file.");
+        });
 
-        } catch (IOException e) {
-            System.out.println("Error writing CSV file.");
-            e.printStackTrace();
-        }
+        thread.start();   // Start new thread
     }
-    public void readFromCSV(String fileName) {
+    public void readFromCSVAsync(String fileName) {
 
-        try {
-            File file = new File(fileName);
-            Scanner sc = new Scanner(file);
+        Thread thread = new Thread(() -> {
 
-            while (sc.hasNextLine()) {
+            try {
+                File file = new File(fileName);
+                Scanner sc = new Scanner(file);
 
-                String line = sc.nextLine();
+                if (sc.hasNextLine()) {
+                    sc.nextLine(); // Skip header
+                }
 
-                String[] data = line.split(",");
+                while (sc.hasNextLine()) {
 
-                Contact contact = new Contact(
-                    data[0],  // firstName
-                    data[1],  // lastName
-                    data[2],  // address
-                    data[3],  // city
-                    data[4],  // state
-                    data[5],  // zip
-                    data[6],  // phone
-                    data[7]   // email
-                );
+                    String line = sc.nextLine();
+                    String[] data = line.split(",");
 
-                addressBook.getContacts().add(contact);
+                    Contact contact = new Contact(
+                            data[0], data[1], data[2],
+                            data[3], data[4], data[5],
+                            data[6], data[7]
+                    );
+
+                    addressBook.addContact(contact);
+                }
+
+                sc.close();
+                System.out.println("CSV Reading Completed (Background Thread)");
+
+            } catch (Exception e) {
+                e.printStackTrace();
             }
 
-            sc.close();
-            System.out.println("Contacts loaded from CSV successfully.");
+        });
 
-        } catch (FileNotFoundException e) {
-            System.out.println("CSV file not found.");
-            e.printStackTrace();
-        }
+        thread.start();   // Start new thread
     }
   
     }

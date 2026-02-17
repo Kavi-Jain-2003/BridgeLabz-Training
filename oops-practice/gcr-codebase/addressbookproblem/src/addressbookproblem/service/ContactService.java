@@ -10,9 +10,13 @@ import addressbookproblem.repository.ContactRepository;
 
 public class ContactService {
 
-	private ContactRepository repository = new ContactRepository();
+	private ContactRepository repository;
 
-//usecase1,2
+	public ContactService(AddressBook addressBook) {
+	    repository = new ContactRepository(addressBook);
+	}
+
+	//usecase1,2
 	public boolean addNewContact(Contact contact) {
 		// Check for duplicate first
 		if (repository.isDuplicate(contact)) {

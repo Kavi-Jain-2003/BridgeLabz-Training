@@ -8,10 +8,20 @@ import java.util.Map;
 import addressbookproblem.model.AddressBook;
 import addressbookproblem.service.ContactService;
 import addressbookproblem.repository.ContactRepository;
+import addressbookproblem.repository.DBRepository;
 
 public class ContactController {
+	private AddressBook addressBook;
+	private ContactRepository repository;
+	private ContactService service;
+	private DBRepository dbRepository;
 
-	private ContactService service = new ContactService();
+	public ContactController() {
+	    addressBook = new AddressBook();
+	    repository = new ContactRepository(addressBook);
+	    service = new ContactService(addressBook);
+	    dbRepository = new DBRepository();
+	}
 
 //usecase1, 2
 	public AddressBook getAddressBook() {
@@ -80,12 +90,7 @@ public class ContactController {
 	}
 
 //usecase 13
-	private ContactRepository repository;
-
-	public ContactController() {
-		repository = new ContactRepository();
-	}
-
+	
 	public void saveToFile(String fileName) {
 		repository.writeToFile(fileName);
 	}
@@ -93,13 +98,17 @@ public class ContactController {
 	public void loadFromFile(String fileName) {
 		repository.readFromFile(fileName);
 	}
-//usecase14
-	public void saveToCSV(String fileName) {
-	    repository.writeToCSV(fileName);
+//usecase14 and 17
+	public void saveToCSVAsync(String fileName) {
+	    repository.writeToCSVAsync(fileName);
 	}
 
-	public void loadFromCSV(String fileName) {
-	    repository.readFromCSV(fileName);
+	public void loadFromCSVAsync(String fileName) {
+	    repository.readFromCSVAsync(fileName);
 	}
-
+	//usecase 18
+	public void saveToDatabase()
+	{
+		dbRepository.saveToDB(repository.getAddressBook());
+	}
 }
