@@ -275,6 +275,18 @@ Studied and submitted design pattern problems. Studied and submitted multi threa
 9-Feb-2026(Monday):
 Implemented sonarQube on address book problem.
 
+10-Feb-2026(Tuesday):
+Written Mock exam
+
+16-Feb-2026(Monday):
+Refactoring addressbook problem and employee wage computation problem.
+
+17-Feb-2026(Tuesday):
+Started with quantity measurement app.
+
+18-Feb-2026(Wednesday):
+M1 Mock
+
 
 
 --------------------------------------------------------------------------------------------------------------
