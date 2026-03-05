@@ -35,6 +35,28 @@ public class PatientDAO
 		System.out.println("Patient registered successfully");
 		con.close();
 	}
+	 public void updatePatient(int id,String address,String phone) throws Exception{
+
+	        Connection con = DBConnection.getConnection();
+
+	        String sql =
+	        "UPDATE patients SET address=?, phone=? WHERE patient_id=?";
+
+	        PreparedStatement ps = con.prepareStatement(sql);
+
+	        ps.setString(1,address);
+	        ps.setString(2,phone);
+	        ps.setInt(3,id);
+
+	        int rows = ps.executeUpdate();
+
+	        if(rows>0)
+	            System.out.println("Patient Updated");
+	        else
+	            System.out.println("Patient not found");
+
+	        con.close();
+	    }
 	
 	public void searchPatient(String keyword) throws Exception
 	{
@@ -54,5 +76,31 @@ public class PatientDAO
 		}
 		con.close();
 	}
+	  public void viewVisitHistory(int patientId) throws Exception{
+
+	        Connection con = DBConnection.getConnection();
+
+	        String sql =
+	        "SELECT a.doctor_name,v.diagnosis,v.visit_date " +
+	        "FROM appointments a JOIN visits v " +
+	        "ON a.appointment_id=v.appointment_id " +
+	        "WHERE a.patient_id=? " +
+	        "ORDER BY v.visit_date";
+
+	        PreparedStatement ps = con.prepareStatement(sql);
+
+	        ps.setInt(1,patientId);
+
+	        ResultSet rs = ps.executeQuery();
+
+	        while(rs.next()){
+
+	            System.out.println("Doctor: "+rs.getString("doctor_name"));
+	            System.out.println("Diagnosis: "+rs.getString("diagnosis"));
+	            System.out.println("Visit Date: "+rs.getDate("visit_date"));
+	            System.out.println("---------------------");
+	        }
+	        con.close();
+	  }
 }
 

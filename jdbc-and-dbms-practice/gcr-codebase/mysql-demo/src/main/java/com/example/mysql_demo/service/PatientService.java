@@ -12,11 +12,19 @@ public class PatientService {
 
     private PatientDAO dao = new PatientDAO();
 
-    public void register(Patient patient) throws Exception {
+    public void register(Patient patient) throws Exception{
         dao.registerPatient(patient);
     }
 
-    public void search(String keyword) throws Exception {
+    public void update(int id,String address,String phone) throws Exception{
+        dao.updatePatient(id,address,phone);
+    }
+
+    public void search(String keyword) throws Exception{
         dao.searchPatient(keyword);
+    }
+
+    public void visitHistory(int id) throws Exception{
+        dao.viewVisitHistory(id);
     }
 }
