@@ -1,6 +1,0 @@
-INFO: Application started
-WARNING: Low memory
-ERROR: Database connection failed
-Info: Retrying connection
-error: Disk not found
-INFO: Application stopped
