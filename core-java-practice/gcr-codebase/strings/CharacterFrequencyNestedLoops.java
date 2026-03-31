@@ -1,0 +1,65 @@
+//Write a program to find the frequency of characters in a string using nested loops and display the result
+
+//importing scanner class
+import java.util.Scanner;
+public class CharacterFrequencyNestedLoops
+{
+	public static void main(String[] args)
+	{
+	//scanner object
+	Scanner input=new Scanner(System.in);
+	//user input
+	System.out.println("enter a string:");
+	String text=input.nextLine();
+	String[] result=findCharacterFrequency(text);
+	
+	 // Display result
+        System.out.println("\nCharacter  Frequency");
+        for (int i = 0; i < result.length; i++) {
+            if (result[i] != null) {
+                System.out.println(result[i]);
+            }
+        }
+		//closing input
+		input.close();
+	}
+	 
+	// Method to find frequency of characters using charAt()
+    public static String[] findCharacterFrequency(String text) 
+	{
+		char[] chars=text.toCharArray();
+        int[] frequency = new int[chars.length];
+
+        //nested loop to calculate frequency
+		for(int i=0; i<chars.length; i++)
+		{
+			if(chars[i]=='0')
+			{continue;
+			}
+			frequency[i]=1;
+			for(int j=i+1; j<chars.length; j++)
+			{
+				if(chars[i]==chars[j])
+				{
+					frequency[i]++;
+					//marks duplicate
+					chars[j]='0';
+				}
+			}			
+		}
+		// Create 1D String array for result
+        String[] result = new String[chars.length];
+        int index = 0;
+
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] != '0') {
+                result[index] = chars[i] + "          " + frequency[i];
+                index++;
+            }
+        }
+
+        return result;
+	}	
+}
+
+
