@@ -1,0 +1,3 @@
+Java File Handling Example
+This file is used to test reading and writing.
+Learning Java is fun.

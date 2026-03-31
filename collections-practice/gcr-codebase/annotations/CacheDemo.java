@@ -1,0 +1,66 @@
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import java.lang.annotation.ElementType;
+import java.lang.reflect.Method;
+import java.util.HashMap;
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+@interface CacheResult {
+}
+class Calculator {
+
+    @CacheResult
+    public int slowSquare(int num) {
+
+        // simulate slow computation
+        try {
+            Thread.sleep(2000); // 2 seconds delay
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        return num * num;
+    }
+}
+
+
+class CacheExecutor {
+
+    private static HashMap<String, Object> cache = new HashMap<>();
+
+    public static Object execute(Object obj, String methodName, Object param) throws Exception {
+
+        Method method = obj.getClass().getMethod(methodName, int.class);
+
+        if (method.isAnnotationPresent(CacheResult.class)) {
+
+            String key = methodName + "_" + param;
+
+            // check cache
+            if (cache.containsKey(key)) {
+                System.out.println("Returning cached result...");
+                return cache.get(key);
+            }
+
+            // compute and store result
+            System.out.println("Computing result...");
+            Object result = method.invoke(obj, param);
+            cache.put(key, result);
+            return result;
+        }
+
+        return method.invoke(obj, param);
+    }
+}
+public class CacheDemo {
+    public static void main(String[] args) throws Exception {
+
+        Calculator calc = new Calculator();
+
+        System.out.println(CacheExecutor.execute(calc, "slowSquare", 5));
+        System.out.println(CacheExecutor.execute(calc, "slowSquare", 5)); // cached
+        System.out.println(CacheExecutor.execute(calc, "slowSquare", 6));
+    }
+}

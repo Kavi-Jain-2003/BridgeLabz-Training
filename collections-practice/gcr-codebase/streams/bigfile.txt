@@ -1,0 +1,10 @@
+This is a large file simulation.
+Buffered streams improve performance.
+This data will be copied using normal and buffered streams.
+This is a large file simulation.
+Buffered streams improve performance.
+This data will be copied using normal and buffered streams.
+
+This is a large file simulation.
+Buffered streams improve performance.
+This data will be copied using normal and buffered streams.
